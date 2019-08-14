@@ -1,0 +1,13 @@
+$font-manrope-regular: 'Manrope Regular';
+
+@font-face {
+  font-family: $font-manrope-regular;
+  src: url('fonts/manrope-regular.otf');
+}
+
+$font-manrope-thin: 'Manrope thin';
+
+@font-face {
+  font-family: $font-manrope-thin;
+  src: url('fonts/manrope-thin.otf');
+}
