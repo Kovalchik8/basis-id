@@ -1,0 +1,135 @@
+.about-desc {
+  margin-top: 90px;
+  text-align: center;
+  color: $color-gray-menu;
+
+  .headline {
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  .text {
+    font-family: $font-manrope-regular;
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    max-width: 865px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  &__awords {
+    margin: 70px 0 80px 0;
+  }
+
+  &__points {
+    .point {
+      text-align: left;
+
+      .headline {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .call-to-action {
+      margin-top: 100px;
+    }
+  }
+}
+
+.about-press {
+  margin-top: 80px;
+
+  &__list {
+    margin-top: 40px;
+
+    .article {
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:hover {
+        .article__overlay {
+          opacity: .95;
+          visibility: visible;
+        }
+      }
+
+      &__overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(80.69deg, rgba(255, 255, 255, 0.228) 7.92%, rgba(255, 255, 255, 0) 87.42%), #2C2C2C;
+        box-shadow: 0px 15px 50px rgba(31, 31, 31, 0.296);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+
+        a {
+          font-family: $font-manrope-thin;
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.about-social {
+  margin-top: 120px;
+
+  .headline {
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  .under-headline {
+    font-family: $font-manrope-regular;
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $color-gray-menu;
+    display: block
+  }
+
+  &__list {
+    margin-top: 60px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    transition: .3s;
+
+    &:hover {
+      background: #F4F4F4;
+
+      i {
+        color: #00C2FF;
+      }
+    }
+
+    i {
+      color: $color-gray-menu;
+      font-size: 72px;
+      transition: .3s;
+    }
+  }
+}

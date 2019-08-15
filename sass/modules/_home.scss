@@ -5,11 +5,16 @@
   display: flex;
   align-items: center;
 
+  &--about {
+    background: url('img/header-bg-about.svg') bottom/cover no-repeat;
+  }
+
   &__left {
     color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-right: 0;
 
     p {
       font-size: 18px;
@@ -43,6 +48,10 @@
         }
       }
     }
+  }
+
+  &__right {
+    padding-left: 30px;
   }
 }
 
