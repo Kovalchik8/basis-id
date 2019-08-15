@@ -66,4 +66,35 @@
 
     }
   }
+
+  &--scroll {
+
+    .navbar-nav {
+      .dropdown {
+        position: static;
+
+        &-menu {
+          padding: 0;
+          justify-content: center;
+          width: 100%;
+          border-radius: 0;
+
+          &.show {
+            display: flex;
+          }
+
+          a {
+            width: auto;
+            padding: 10px 75px;
+            color: #1E45D4;
+
+            &:hover {
+              background: #FFE3EA;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

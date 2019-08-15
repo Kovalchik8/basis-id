@@ -42,8 +42,10 @@
               <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Products</a>
               <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
+                <a class="dropdown-item" href="#">Products</a>
+                <a class="dropdown-item" href="#">Documents</a>
+                <a class="dropdown-item" href="#">Compliance</a>
+                <a class="dropdown-item" href="#">FAQ</a>
               </div>
             </li>
             <li class="nav-item">

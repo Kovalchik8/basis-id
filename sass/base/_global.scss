@@ -36,11 +36,19 @@ a {
   transition: .3s;
   font-weight: 600;
   color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  &:hover {
+    color: #fff;
+  }
 
   &--white {
     border: 2px solid #FFFFFF;
-    height: 45px;
-    width: 138px;
+    font-size: 14px;
 
     &:hover {
       color: #000;
@@ -49,17 +57,25 @@ a {
   }
 
   &--pink {
-    height: 45px;
-    width: 150px;
     background: #FF577F;
-    font-size: 16px;
-    line-height: 22px;
 
     &:hover {
       background: #FF7394;
-      color: #fff;
     }
   }
+
+  &--blue {
+    background: #2453FF;
+
+    &:hover {
+      background: #4C72FF;
+    }
+  }
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
@@ -75,6 +91,10 @@ a {
   font-size: 35px;
   line-height: 50px;
 
+  &--white {
+    color: #fff;
+  }
+
   &--small {
     font-size: 25px;
     line-height: 40px;
@@ -85,10 +105,26 @@ a {
   }
 }
 
+.headline-text {
+  display: block;
+  font-family: $font-manrope-thin;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
 .text-gray {
   font-family: $font-manrope-thin;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 0.02em;
-  color: #636B7C;
+  color: $color-gray-menu;
+}
+
+.container-wrapper {
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
 }
