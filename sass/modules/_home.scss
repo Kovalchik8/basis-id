@@ -1,11 +1,21 @@
 .hero {
-  height: calc(100vh - 80px);
+  height: auto;
+  min-height: calc(100vh - 80px);
   margin-top: 79px;
   background: url('img/header-bg.svg') bottom/cover no-repeat;
   display: flex;
   align-items: center;
 
-  &--about {
+  .left-upper-text {
+    font-size: 31px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    max-width: 550px;
+  }
+
+  &--about,
+  &--compliance,
+  &--product {
     background: url('img/header-bg-about.svg') bottom/cover no-repeat;
   }
 
@@ -47,6 +57,31 @@
           padding-left: 10px;
         }
       }
+    }
+  }
+
+  &--product {
+    .hero__left {
+
+      .left-upper-text {
+        font-size: 38px;
+        line-height: 58px;
+      }
+
+      .left-upper-text,
+      p {
+        max-width: 710px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero__icons {
+      margin-top: 50px;
+    }
+
+    .buttons {
+      margin-top: 60px;
     }
   }
 
@@ -247,7 +282,7 @@
 
   &__desc {
     text-align: left;
-    max-width: 525px;
+    max-width: 535px;
     display: inline-block;
 
     p {

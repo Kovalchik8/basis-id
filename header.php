@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 
   <!-- Font awesome 5 -->
-  <script src="https://kit.fontawesome.com/65085b1a27.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,13 +36,13 @@
 
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?php echo site_url(); ?>">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Products</a>
               <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Products</a>
+                <a class="dropdown-item" href="<?php echo site_url('/product') ?>">Product</a>
                 <a class="dropdown-item" href="#">Documents</a>
                 <a class="dropdown-item" href="#">Compliance</a>
                 <a class="dropdown-item" href="#">FAQ</a>
@@ -52,16 +52,16 @@
               <a class="nav-link" href="#">Documents</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Compliance</a>
+              <a class="nav-link" href="<?php echo site_url('/compliance') ?>">Compliance</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="<?php echo site_url('/blog') ?>">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="<?php echo site_url('about-us') ?>">About Us</a>
             </li>
           </ul>
 
