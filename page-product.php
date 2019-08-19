@@ -40,16 +40,16 @@
   <div class="container">
     <ul class="nav nav-pills section-tabs__tabs" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-          aria-controls="pills-home" aria-selected="true">КYC/ AML</a>
+        <a class="nav-link active" id="pills-first-tab" data-toggle="pill" href="#pills-first" role="tab"
+          aria-controls="pills-first" aria-selected="true">КYC/ AML</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-          aria-controls="pills-profile" aria-selected="false">Compliance platform</a>
+        <a class="nav-link" id="pills-second-tab" data-toggle="pill" href="#pills-second" role="tab"
+          aria-controls="pills-second" aria-selected="false">Compliance platform</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-          aria-controls="pills-contact" aria-selected="false">Documents verification</a>
+        <a class="nav-link" id="pills-third-tab" data-toggle="pill" href="#pills-third" role="tab"
+          aria-controls="pills-third" aria-selected="false">Documents verification</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="pills-forth-tab" data-toggle="pill" href="#pills-forth" role="tab"
@@ -60,7 +60,7 @@
 
   <div class="tab-content" id="pills-tabContent">
 
-    <div class="tab-pane bg-blue fade show active product__first-pane" id="pills-home" role="tabpanel"
+    <div class="tab-pane show active bg-blue-light fade product__first-pane" id="pills-first" role="tabpanel"
       aria-labelledby="pills-home-tab">
       <div class="container">
         <div class="row">
@@ -175,110 +175,166 @@
 
     </div>
 
-    <div class="tab-pane tab-pane--reverse fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="tab-pane fade product__second-pane" id="pills-second" role="tabpanel"
+      aria-labelledby="pills-profile-tab">
+      <div class="container">
+        <h2 class="headline headline--blue-line">Compliance with BASIS ID platform</h2>
+        <div class="row list">
+          <div class="list__item list__item--pink col-md-3">
+            <span>Full compliance</span> with the regulations of FATF, 5AMLD, GDPR, MAS, FINMA, CySEC, BSA, FCA and
+            more.
+          </div>
+          <div class="list__item list__item--blue col-md-3">
+            <span>AML / OFAC / PEP / Sanctions / Adverse</span> media screening across 230 countries that combines to
+            42842
+            databases.
+          </div>
+          <div class="list__item list__item--pink col-md-3">
+            <span>Compile and extract</span> various datasheets for the ease of statistical analysis and regulatory
+            reporting.
+          </div>
+          <div class="list__item list__item--blue col-md-3">
+            <span>Application risk scoring,</span> red flag notifications and screening criterea rulesets.
+          </div>
+          <div class="list__item list__item--blue col-md-3">
+            <span>Full compliance</span> with the regulations of FATF, 5AMLD, GDPR, MAS, FINMA, CySEC, BSA, FCA and
+            more.
+          </div>
+          <div class="list__item list__item--pink col-md-3">
+            <span>AML / OFAC / PEP / Sanctions / Adverse</span> media screening across 230 countries that combines to
+            42842
+            databases.
+          </div>
+          <div class="list__item list__item--blue col-md-3">
+            <span>Compile and extract</span> various datasheets for the ease of statistical analysis and regulatory
+            reporting.
+          </div>
+          <div class="list__item list__item--pink col-md-3">
+            <span>Application risk scoring,</span> red flag notifications and screening criterea rulesets.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="offset-md-1 col-md-10">
+            <div class="call-to-action">
+              <span>Don't hesitate! We are here to help. </span>
+              <button class="btn btn--pink">Ask an expert</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row bottom">
+          <div class="col-md-6">
+            <h3 class="headline">The compliance platform of BASIS ID is a powerful all-in-one instrument for the risk &
+              compliance managers.
+            </h3>
+            <div class="tab-pane__desc">
+              Observe and control the process of the customer onboarding in real-time. Set the rules the system will
+              follow, ask customers to digitally sign necessary documents, conduct enhanced due diligence and generate
+              reports
+            </div>
+            <ul>
+              <li>No more manual verification</li>
+              <li>No more scrutiny over the document's</li>
+              <li>No more micro-service Frankenstains</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/pane-2/right.png') ?>" alt="right">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-pane fade bg-blue-light product__third-pane" id="pills-third" role="tabpanel"
+      aria-labelledby="pills-third-tab">
       <div class="container">
         <div class="row">
-
-          <div class="col-md-3">
-            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/compliance/tab-icon-3.svg') ?>" alt="icon">
-          </div>
-
-          <div class="col-md-9">
-
-            <h2 class="headline headline--blue-line">KYC / AML Compliance</h2>
-            <span class="tab-pane__desc">
-              BASIS ID services treat compliance as it’s core feature
-            </span>
-
-            <div class="tab-pane__list">
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
+          <div class="col-md-6">
+            <h2 class="headline headline--blue-line">Documents verification by BASIS ID</h2>
+            <div class="tab-pane__desc">
+              The document verification processing based on the machine learning algorythms is verifying more than 1500
+              documents across the world in the automatic mode.
+            </div>
+            <div class="gray-note">
+              BASIS ID has already succesfully verified more than <span>10.000.000</span> documents and counting!
+            </div>
+            <div class="bottom">
+              <div class="bottom__item">
+                <h3 class="headline">Documents fake detection</h3>
+                <span>is based on the analysis of:</span>
+                <ul>
+                  <li>Document's structure, security </li>
+                  <li>features, fonts.</li>
+                  <li>Neighbour pixel analysis</li>
+                  <li>Average distance analysis</li>
+                  <li>Copy-Move detection</li>
+                </ul>
               </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
-              </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
-              </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
+              <div class="bottom__item">
+                <h3 class="headline">OCR Engine</h3>
+                <span>In-house developed OCR extracts the data directly from the image of the ID for the purposes of
+                  verification, utilizing:</span>
+                <ul>
+                  <li>Document's structure, security </li>
+                  <li>features, fonts.</li>
+                  <li>Neighbour pixel analysis</li>
+                  <li>Average distance analysis</li>
+                  <li>Copy-Move detection</li>
+                </ul>
               </div>
             </div>
-
-            <div class="call-to-action">
-              <span>Read more about BASIS ID GDPR solution and how to make your business compliant</span>
-              <button class="btn btn--pink">Request a demo</button>
-            </div>
-
           </div>
-
+          <div class="col-md-6">
+            <img src="<?php echo get_theme_file_uri('/img/product/pane-3/right.png') ?>" alt="right">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="tab-pane fade bg-pink" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
+    <div class="tab-pane fade product__forth-pane" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
 
-            <h2 class="headline headline--blue-line">KYC / AML Compliance</h2>
-            <span class="tab-pane__desc">
-              BASIS ID services treat compliance as it’s core feature
-            </span>
+      <div class="container-fluid email align-center">
+        <div class="email__content">
+          <h3 class="headline headline--white">Leave your email to plan a demo call</h3>
+          <form>
+            <input type="email" name="email" placeholder="Type your email for demo" required>
+            <button type="submit" class="btn btn--no-radius btn--pink">Plan a demo</button>
+          </form>
+        </div>
+      </div>
 
-            <div class="tab-pane__list">
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
+      <div class="cards">
+        <div class="container">
+          <h3 class="headline align-center">Integrating the BASIS ID sulution is as easy as it gets</h3>
+          <div class="row cards__list">
+
+            <div class="col-md-4">
+              <div class="cards__item">
+                <h3 class="headline headline--white headline--pink-line">Widget integration</h3>
+                <p>Web-and-mobile-ready widget integration: simply embed the contemporary widget with a friendly user
+                  interface and observe the verifications inside the convenient BASIS ID panel.</p>
               </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
+            </div>
+
+            <div class="col-md-4">
+              <div class="cards__item">
+                <h3 class="headline headline--white headline--pink-line">Integration via API</h3>
+                <p>Integration via API: collect the data, import and export the elements of the data and processing.</p>
               </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
-              </div>
-              <div class="item">
-                <h3 class="headline">Compliant Worldwide</h3>
-                <p>BASIS ID KYC service has been initially designed to satisfy various legal requirements and
-                  guidelines. We have thoroughly studied the AML/CTF legislation to provide a worldwide compatible
-                  solution and protect our clients by the highest standards in the field.
-                </p>
+            </div>
+
+            <div class="col-md-4">
+              <div class="cards__item">
+                <h3 class="headline headline--white headline--pink-line">Great flexibility</h3>
+                <p>Great flexibility and vast customization for the specific business needs. BASIS ID is offered as a
+                  whitelabel solution with implementation of the elements and functions, required for the collection and
+                  processing of the personal data.</p>
               </div>
             </div>
 
           </div>
-
-          <div class="col-md-3">
-            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/compliance/tab-icon-2.svg') ?>" alt="icon">
-          </div>
-
         </div>
       </div>
     </div>

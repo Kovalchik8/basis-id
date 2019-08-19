@@ -90,4 +90,230 @@
       }
     }
   }
+
+  &__second-pane {
+    .list {
+      margin-top: 20px;
+
+      &__item {
+        margin-top: 25px;
+        color: $color-gray-menu;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+
+        span {
+          color: #000;
+          font-family: $font-manrope-bold;
+
+          &::before {
+            display: block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 30px;
+            margin-bottom: 13px;
+            content: "\f058";
+          }
+        }
+
+        &--pink {
+          span::before {
+            color: #FFC7D4;
+          }
+        }
+
+        &--blue {
+          span::before {
+            color: #9BB1FF;
+          }
+        }
+      }
+    }
+
+    .call-to-action {
+      margin-top: 70px;
+    }
+
+    .bottom {
+      margin-top: 120px;
+
+      .headline {
+        font-size: 30px;
+        line-height: 42px;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        margin-top: 30px;
+
+        li {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 32px;
+          color: #000000;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            content: url('img/product/pane-2/tick.svg');
+            margin: 5px 25px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__third-pane {
+    .gray-note {
+      font-size: 28px;
+      line-height: 139.9%;
+      color: #8B91A5;
+      font-weight: 600;
+      margin-top: 30px;
+
+      span {
+        color: #000;
+      }
+    }
+
+    .bottom {
+      margin-top: 45px;
+      display: flex;
+
+      &__item {
+        flex: 1 0 0;
+
+        .headline {
+          font-size: 24px;
+          line-height: 35px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: 0.02em;
+          color: #000000;
+          font-family: $font-manrope-regular;
+        }
+
+        ul {
+          margin-top: 20px;
+
+          li {
+            font-family: $font-manrope-regular;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #636B7C;
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+              display: inline-block;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f058";
+              color: #9BB1FF;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__forth-pane {
+    &.tab-pane {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .email {
+      background-color: #4C72FF;
+
+      &__content {
+        display: inline-block;
+
+        .headline {
+          margin-top: 50px;
+        }
+      }
+
+      form {
+        height: 55px;
+        display: flex;
+        margin: 30px auto 60px auto;
+        width: 90%;
+
+        input {
+          padding-left: 20px;
+          border: 1px solid #D0D5E5;
+          border-radius: 5px 0 0 5px;
+          flex-grow: 1;
+
+          &::placeholder {
+            font-family: $font-manrope-regular;
+            font-size: 14px;
+            line-height: 26px;
+            letter-spacing: 0.02em;
+            color: #99A0B0;
+          }
+        }
+
+        .btn {
+          border-radius: 0 5px 5px 0;
+        }
+      }
+    }
+
+    .cards {
+      background: #FFE3EA;
+      padding-top: 75px;
+      padding-bottom: 110px;
+
+      &__list {
+        margin-top: 55px;
+      }
+
+      .headline {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--white {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      &__item {
+        background: #4C72FF;
+        border-radius: 25px;
+        padding: 40px 30px 30px 40px;
+        height: 100%;
+
+        p {
+          font-family: $font-manrope-thin;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #FFFFFF;
+        }
+      }
+
+    }
+  }
+
+
 }

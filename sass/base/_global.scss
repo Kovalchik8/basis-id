@@ -71,6 +71,10 @@ a {
       background: #4C72FF;
     }
   }
+
+  &--no-radius {
+    border-radius: 0;
+  }
 }
 
 .margin-auto {
@@ -127,6 +131,17 @@ a {
       margin: 15px 0;
     }
   }
+
+  &--pink-line {
+    &:after {
+      content: '';
+      background: linear-gradient(25.58deg, rgba(255, 255, 255, 0.228) 7.92%, rgba(255, 255, 255, 0) 87.42%), #FF99B1;
+      height: 4px;
+      width: 63px;
+      display: block;
+      margin: 15px 0;
+    }
+  }
 }
 
 .headline-text {
@@ -175,6 +190,10 @@ a {
 
 .bg-blue {
   background-color: $color-blue-bg;
+
+  &-light {
+    background-color: $color-blue-light;
+  }
 }
 
 .bg-pink {

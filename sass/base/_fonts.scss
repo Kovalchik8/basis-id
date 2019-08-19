@@ -5,9 +5,16 @@ $font-manrope-regular: 'Manrope Regular';
   src: url('fonts/manrope-regular.otf');
 }
 
-$font-manrope-thin: 'Manrope thin';
+$font-manrope-thin: 'Manrope Thin';
 
 @font-face {
   font-family: $font-manrope-thin;
   src: url('fonts/manrope-thin.otf');
+}
+
+$font-manrope-bold: 'Manrope Bold';
+
+@font-face {
+  font-family: $font-manrope-bold;
+  src: url('fonts/manrope-bold.otf');
 }
