@@ -43,13 +43,13 @@
                 aria-expanded="false">Products</a>
               <div class="dropdown-menu" aria-labelledby="dropdownId">
                 <a class="dropdown-item" href="<?php echo site_url('/product') ?>">Product</a>
-                <a class="dropdown-item" href="#">Documents</a>
+                <a class="dropdown-item" href="<?php echo site_url('/documents') ?>">Documents</a>
                 <a class="dropdown-item" href="#">Compliance</a>
                 <a class="dropdown-item" href="#">FAQ</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Documents</a>
+              <a class="nav-link" href="<?php echo site_url('/documents') ?>">Documents</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('/compliance') ?>">Compliance</a>

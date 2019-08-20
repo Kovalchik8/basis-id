@@ -1,0 +1,139 @@
+.documents {
+  &__hero {
+    height: 330px;
+    margin-top: 79px;
+    background: url('img/documents/header-bg.svg') bottom/cover no-repeat;
+    display: flex;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-family: $font-manrope-regular;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        max-width: 660px;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 100px;
+
+    .item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+
+      .thumb {
+        width: 167px;
+        height: 202px;
+        margin-right: 35px;
+        flex-shrink: 0;
+      }
+
+      .headline {
+        font-size: 30px;
+        line-height: 50px;
+      }
+
+      p {
+        font-family: $font-manrope-regular;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: #000000;
+      }
+
+      .btn {
+        padding: 10px 45px;
+      }
+    }
+  }
+}
+
+.modal-download {
+
+  .modal-content {
+    max-width: 780px;
+    border: none;
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 9;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+    display: flex;
+  }
+
+  &__left {
+    padding: 50px 35px 90px 50px;
+    display: flex;
+    flex-direction: column;
+
+    .headline {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-family: $font-manrope-regular;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+
+    input {
+      border: 1px solid #D0D5E5;
+      border-radius: 5px;
+      height: 50px;
+      padding-left: 15px;
+      margin: 20px 0 30px 0;
+
+      &::placeholder {
+        font-family: $font-manrope-regular;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        color: #99A0B0;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    .btn {
+      padding: 10px 45px;
+      margin-right: auto;
+    }
+  }
+
+  &__right {
+    width: 270px;
+    flex-shrink: 0;
+    background: url('img/documents/modal-book.jpg') center/cover no-repeat;
+  }
+}
