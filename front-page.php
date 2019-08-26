@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero">
+<div class="hero hero--buttons">
   <div class="container">
     <div class="row">
       <div class="col-md-6 hero__left">
@@ -10,9 +10,11 @@
           to start using your service faster
         </p>
         <div class="buttons">
-          <button class="btn btn--pink">Get in touch</button>
-          <span> or </span>
-          <a href="#" class="">Learn more</a>
+          <button class="btn btn--pink scroll-to-form">Get in touch</button>
+          <div class="buttons__wrapper">
+            <span> or </span>
+            <a href="" class="">Learn more</a>
+          </div>
         </div>
       </div>
       <div class="col-md-6 hero__right">
@@ -56,84 +58,84 @@
   <div class="container-fluid partners__list">
     <div class="row">
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Visa.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Visa.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Experian.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Experian.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/F-10.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/F-10.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Bitfury.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Bitfury.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Visa.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Visa.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Experian.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Experian.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/F-10.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/F-10.svg') ?>" alt="partner">
       </div>
 
-      <div class="col-md-3 partners__item">
+      <div class="col-lg-3 col-6 partners__item">
         <div class="overlay">
           <p>
             The implementation of Know Your Customer (KYC) and Anti Money Laundering (AML) procedures
             provide.
           </p>
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/partners/Bitfury.svg') ?>" alt="partner">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/partners/Bitfury.svg') ?>" alt="partner">
       </div>
 
     </div>
@@ -148,7 +150,7 @@
 
     <div class="row help__list">
 
-      <div class="col-md-3 align-center">
+      <div class="col-lg-3 align-center">
         <div class="help__item">
           <div class="align-center">
             <img src="<?php echo get_theme_file_uri('/img/help/1.svg') ?>" alt="icon">
@@ -158,7 +160,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 align-center">
+      <div class="col-lg-3 align-center">
         <div class="help__item">
           <div class="align-center">
             <img src="<?php echo get_theme_file_uri('/img/help/2.svg') ?>" alt="icon">
@@ -169,7 +171,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 align-center">
+      <div class="col-lg-3 align-center">
         <div class="help__item">
           <div class="align-center">
             <img src="<?php echo get_theme_file_uri('/img/help/3.svg') ?>" alt="icon">
@@ -179,7 +181,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 align-center">
+      <div class="col-lg-3 align-center">
         <div class="help__item">
           <div class="align-center">
             <img src="<?php echo get_theme_file_uri('/img/help/4.svg') ?>" alt="icon">
@@ -303,7 +305,7 @@
   <div class="container-fluid features__list">
 
     <div class="row features__item features__item--odd">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <div class="features__desc">
           <h3 class="headline">Global coverage</h3>
           <p>BASIS ID platform allows checking passports, driving licenses and ID cards from more than 190 countries all
@@ -313,16 +315,16 @@
           </p>
         </div>
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/2.svg') ?>" alt="feature">
       </div>
     </div>
 
     <div class="row features__item features__item--even">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/3.svg') ?>" alt="feature">
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <div class="features__desc">
           <h3 class="headline">Global coverage</h3>
           <p>The platform is implemented through an API or widget. Widget with modern UX can be installed instantly, and
@@ -334,7 +336,7 @@
     </div>
 
     <div class="row features__item features__item--odd">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <div class="features__desc">
           <h3 class="headline">Easy to integrate</h3>
           <p>Our infrastructure is built in full compliance with the global and local regulatory requirements including
@@ -343,7 +345,7 @@
           </p>
         </div>
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/1.svg') ?>" alt="feature">
       </div>
     </div>

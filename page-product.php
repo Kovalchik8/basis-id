@@ -14,30 +14,32 @@
       </div>
     </div>
     <div class="row hero__icons">
-      <div class="col-md-3">
-        <img src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
+      <div class="col-md-3 col-6  ">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
       </div>
-      <div class="col-md-3">
-        <img src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
+      <div class="col-md-3 col-6">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
       </div>
-      <div class="col-md-3">
-        <img src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
+      <div class="col-md-3 col-6">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
       </div>
-      <div class="col-md-3">
-        <img src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
+      <div class="col-md-3 col-6">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/partner-1.svg') ?>" alt="partner">
       </div>
     </div>
     <div class="buttons">
       <button class="btn btn--pink">Request a demo</button>
-      <span> or </span>
-      <a href="#" class="">Learn more</a>
+      <div class="buttons__wrapper">
+        <span> or </span>
+        <a href="" class="">Learn more</a>
+      </div>
     </div>
   </div>
 </div>
 
 <section class="section-tabs section-tabs--product product">
 
-  <div class="container">
+  <div class="container product__tabs">
     <ul class="nav nav-pills section-tabs__tabs" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="pills-first-tab" data-toggle="pill" href="#pills-first" role="tab"
@@ -122,7 +124,7 @@
 
         <div class="cards row">
 
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="cards__item">
               <img src="<?php echo get_theme_file_uri('/img/product/pane-1/card-1.svg') ?>" alt="card">
               <h3 class="headline">Identity verification
@@ -139,7 +141,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="cards__item">
               <img src="<?php echo get_theme_file_uri('/img/product/pane-1/card-2.svg') ?>" alt="card">
               <h3 class="headline">Biometrics
@@ -154,7 +156,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="cards__item">
               <img src="<?php echo get_theme_file_uri('/img/product/pane-1/card-3.svg') ?>" alt="card">
               <h3 class="headline">Screening
@@ -180,36 +182,36 @@
       <div class="container">
         <h2 class="headline headline--blue-line">Compliance with BASIS ID platform</h2>
         <div class="row list">
-          <div class="list__item list__item--pink col-md-3">
+          <div class="list__item list__item--pink col-lg-3 col-md-6">
             <span>Full compliance</span> with the regulations of FATF, 5AMLD, GDPR, MAS, FINMA, CySEC, BSA, FCA and
             more.
           </div>
-          <div class="list__item list__item--blue col-md-3">
+          <div class="list__item list__item--blue col-lg-3 col-md-6">
             <span>AML / OFAC / PEP / Sanctions / Adverse</span> media screening across 230 countries that combines to
             42842
             databases.
           </div>
-          <div class="list__item list__item--pink col-md-3">
+          <div class="list__item list__item--pink col-lg-3 col-md-6">
             <span>Compile and extract</span> various datasheets for the ease of statistical analysis and regulatory
             reporting.
           </div>
-          <div class="list__item list__item--blue col-md-3">
+          <div class="list__item list__item--blue col-lg-3 col-md-6">
             <span>Application risk scoring,</span> red flag notifications and screening criterea rulesets.
           </div>
-          <div class="list__item list__item--blue col-md-3">
+          <div class="list__item list__item--blue col-lg-3 col-md-6">
             <span>Full compliance</span> with the regulations of FATF, 5AMLD, GDPR, MAS, FINMA, CySEC, BSA, FCA and
             more.
           </div>
-          <div class="list__item list__item--pink col-md-3">
+          <div class="list__item list__item--pink col-lg-3 col-md-6">
             <span>AML / OFAC / PEP / Sanctions / Adverse</span> media screening across 230 countries that combines to
             42842
             databases.
           </div>
-          <div class="list__item list__item--blue col-md-3">
+          <div class="list__item list__item--blue col-lg-3 col-md-6">
             <span>Compile and extract</span> various datasheets for the ease of statistical analysis and regulatory
             reporting.
           </div>
-          <div class="list__item list__item--pink col-md-3">
+          <div class="list__item list__item--pink col-lg-3 col-md-6">
             <span>Application risk scoring,</span> red flag notifications and screening criterea rulesets.
           </div>
         </div>
@@ -287,7 +289,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <img src="<?php echo get_theme_file_uri('/img/product/pane-3/right.png') ?>" alt="right">
+            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/pane-3/right.png') ?>" alt="right">
           </div>
         </div>
       </div>

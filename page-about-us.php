@@ -29,11 +29,11 @@
 
     <div class="about-desc__awords">
       <div class="row">
-        <div class="offset-md-3 col-md-3 aword align-center">
-          <img src="<?php echo get_theme_file_uri('/img/aword-1.png') ?>" alt="aword">
+        <div class="offset-md-3 col-md-3 col-6 aword align-center">
+          <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/aword-1.png') ?>" alt="aword">
         </div>
-        <div class="col-md-3 aword align-center">
-          <img src="<?php echo get_theme_file_uri('/img/aword-2.png') ?>" alt="aword">
+        <div class="col-md-3 col-6 aword align-center">
+          <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/aword-2.png') ?>" alt="aword">
         </div>
       </div>
     </div>
@@ -76,40 +76,40 @@
     <h2 class="headline align-center">In the press</h2>
 
     <div class="row about-press__list">
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/1.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/1.svg') ?>" alt="article">
       </div>
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/2.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/2.svg') ?>" alt="article">
       </div>
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/3.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/3.svg') ?>" alt="article">
       </div>
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/1.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/1.svg') ?>" alt="article">
       </div>
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/2.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/2.svg') ?>" alt="article">
       </div>
-      <div class="col-md-2 article">
+      <div class="col-lg-2 col-6 article">
         <div class="article__overlay"><a href="#">Read article</a></div>
-        <img src="<?php echo get_theme_file_uri('/img/press/3.svg') ?>" alt="article">
+        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/press/3.svg') ?>" alt="article">
       </div>
     </div>
   </div>
 </section>
 
-<section class="features">
+<section class="features about-features">
 
   <div class="container-fluid features__list">
 
     <div class="row features__item features__item--odd">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <div class="features__desc">
           <h3 class="headline">From e-Estonia to e-Singapore</h3>
           <p>The story of the BASIS ID brand starts off in Estonia and Singapore where the most innovative companies and
@@ -118,16 +118,16 @@
           </p>
         </div>
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/about-1.png') ?>" alt="feature">
       </div>
     </div>
 
     <div class="row features__item features__item--even">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/about-2.png') ?>" alt="feature">
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <div class="features__desc">
           <h3 class="headline">Trusted by the best</h3>
           <p>BASIS ID provides the most professional compliance advice to launch your financial product as quick as
@@ -140,7 +140,7 @@
     </div>
 
     <div class="row features__item features__item--odd">
-      <div class="left col-md-6">
+      <div class="left col-lg-6">
         <div class="features__desc">
           <h3 class="headline">Cooperation is the key</h3>
           <p>In cooperation with the Monetary Authority of Singapore and FINMA, BASIS ID created a system for automated
@@ -149,7 +149,7 @@
           </p>
         </div>
       </div>
-      <div class="right col-md-6">
+      <div class="right col-lg-6">
         <img src="<?php echo get_theme_file_uri('/img/features/about-3.png') ?>" alt="feature">
       </div>
     </div>
@@ -163,16 +163,16 @@
     <span class="under-headline align-center">102 Towner Rd, Block 102, Singapore 327826</span>
 
     <div class="row about-social__list">
-      <a href="#" class="col-md-3 about-social__item">
+      <a href="#" class="col-md-3 col-6 about-social__item">
         <i class="fab fa-medium-m"></i>
       </a>
-      <a href="#" class="col-md-3 about-social__item">
+      <a href="#" class="col-md-3 col-6 about-social__item">
         <i class="fab fa-facebook-square"></i>
       </a>
-      <a href="#" class="col-md-3 about-social__item">
+      <a href="#" class="col-md-3 col-6 about-social__item">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="#" class="col-md-3 about-social__item">
+      <a href="#" class="col-md-3 col-6 about-social__item">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>

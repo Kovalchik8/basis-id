@@ -49,6 +49,10 @@
               BASIS ID services treat compliance as it’s core feature
             </span>
 
+            <div class="tab-pane__mob-img">
+              <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/compliance/tab-icon.svg') ?>" alt="icon">
+            </div>
+
             <div class="tab-pane__list">
               <div class="item">
                 <h3 class="headline">Compliant Worldwide</h3>
@@ -106,6 +110,11 @@
               BASIS ID services treat compliance as it’s core feature
             </span>
 
+            <div class="tab-pane__mob-img">
+              <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/compliance/tab-icon-3.svg') ?>"
+                alt="icon">
+            </div>
+
             <div class="tab-pane__list">
               <div class="item">
                 <h3 class="headline">Compliant Worldwide</h3>
@@ -157,6 +166,11 @@
             <span class="tab-pane__desc">
               BASIS ID services treat compliance as it’s core feature
             </span>
+
+            <div class="tab-pane__mob-img">
+              <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/compliance/tab-icon-2.svg') ?>"
+                alt="icon">
+            </div>
 
             <div class="tab-pane__list">
               <div class="item">

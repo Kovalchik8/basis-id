@@ -18,3 +18,10 @@ $font-manrope-bold: 'Manrope Bold';
   font-family: $font-manrope-bold;
   src: url('fonts/manrope-bold.otf');
 }
+
+$font-manrope-semibold: 'Manrope Semibold';
+
+@font-face {
+  font-family: $font-manrope-semibold;
+  src: url('fonts/manrope-semibold.otf');
+}

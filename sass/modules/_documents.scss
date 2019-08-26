@@ -30,8 +30,16 @@
   &__list {
     margin-top: 100px;
 
+    @media (max-width: 768px) {
+      margin-top: 50px;
+    }
+
     .item {
       display: flex;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       &:not(:last-child) {
         margin-bottom: 60px;
@@ -47,6 +55,12 @@
       .headline {
         font-size: 30px;
         line-height: 50px;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 32px;
+          margin-top: 15px;
+        }
       }
 
       p {
@@ -55,6 +69,11 @@
         line-height: 30px;
         letter-spacing: 0.02em;
         color: #000000;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
 
       .btn {
@@ -85,6 +104,10 @@
   .modal-body {
     padding: 0;
     display: flex;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -92,8 +115,18 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 992px) {
+      padding: 20px;
+      order: 2;
+    }
+
     .headline {
       margin-bottom: 15px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        line-height: 27px;
+      }
     }
 
     p {
@@ -102,6 +135,10 @@
       line-height: 22px;
       letter-spacing: 0.02em;
       color: #000000;
+
+      @media (max-width: 768px) {
+        margin: 0;
+      }
     }
 
     input {
@@ -110,6 +147,10 @@
       height: 50px;
       padding-left: 15px;
       margin: 20px 0 30px 0;
+
+      @media (max-width: 768px) {
+        margin: 15px 0;
+      }
 
       &::placeholder {
         font-family: $font-manrope-regular;
@@ -135,5 +176,10 @@
     width: 270px;
     flex-shrink: 0;
     background: url('img/documents/modal-book.jpg') center/cover no-repeat;
+
+    @media (max-width: 992px) {
+      height: 165px;
+      width: 100%;
+    }
   }
 }

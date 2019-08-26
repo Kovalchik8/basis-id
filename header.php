@@ -20,17 +20,17 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php if (is_page('faq') ) { echo 'data-spy="scroll" data-target="#faq-nav" data-offset="250"'; }  ?>>
 
   <header class="header">
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
 
         <a class="navbar-brand" href="<?php echo site_url(); ?>"><img
-            src="<?php echo get_theme_file_uri('/img/logo-header.svg') ?>" alt="logo" srcset=""></a>
+            src="<?php echo get_theme_file_uri('/img/logo-header.svg') ?>" alt="logo"></a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
           aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <img src="<?php echo get_theme_file_uri('/img/mobile-menu.svg') ?>" alt="menu">
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
 
@@ -55,7 +55,7 @@
               <a class="nav-link" href="<?php echo site_url('/compliance') ?>">Compliance</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQ</a>
+              <a class="nav-link" href="<?php echo site_url('/faq') ?>">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('/blog') ?>">Blog</a>
@@ -65,7 +65,7 @@
             </li>
           </ul>
 
-          <button class="btn btn--white">Get in touch</button>
+          <button class="btn btn--white scroll-to-form">Get in touch</button>
 
         </div>
 

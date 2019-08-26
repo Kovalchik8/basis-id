@@ -1,16 +1,50 @@
 .hero {
   height: auto;
-  min-height: calc(100vh - 80px);
   margin-top: 79px;
   background: url('img/header-bg.svg') bottom/cover no-repeat;
   display: flex;
-  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: 767px) {
+    align-items: center;
+    min-height: calc(100vh - 80px);
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 35px;
+    position: relative;
+  }
+
+  &--buttons {
+    @media (max-width: 767px) {
+      padding-bottom: 200px;
+    }
+
+    .buttons {
+
+      @media (max-width: 767px) {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+      }
+    }
+
+  }
 
   .left-upper-text {
     font-size: 31px;
     line-height: 50px;
     margin-bottom: 15px;
     max-width: 550px;
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+      line-height: 35px;
+    }
   }
 
   &--about,
@@ -19,12 +53,31 @@
     background: url('img/header-bg-about.svg') bottom/cover no-repeat;
   }
 
+  &--about {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &--compliance {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
   &__left {
     color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-right: 0;
+
+    @media (min-width: 767px) {
+      padding-right: 0;
+    }
+
+    @media (max-width: 767px) {
+      position: static;
+    }
 
     p {
       font-size: 18px;
@@ -33,9 +86,32 @@
       letter-spacing: 0.02em;
       margin: 20px 0 35px 0;
       max-width: 455px;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
     }
 
     .buttons {
+
+      &__wrapper {
+        display: inline-block;
+
+        @media (max-width: 767px) {
+          margin-left: -22px;
+        }
+      }
+
+      .btn--pink {
+        @media (max-width: 767px) {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 90%;
+          margin-bottom: 25px;
+        }
+      }
+
       span {
         margin: 0 10px;
       }
@@ -66,6 +142,12 @@
       .left-upper-text {
         font-size: 38px;
         line-height: 58px;
+        display: inline-block;
+
+        @media (max-width: 767px) {
+          font-size: 25px;
+          line-height: 35px;
+        }
       }
 
       .left-upper-text,
@@ -78,20 +160,40 @@
 
     .hero__icons {
       margin-top: 50px;
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+
+      &>div {
+        @media (max-width: 767px) {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     .buttons {
       margin-top: 60px;
+
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
     }
   }
 
   &__right {
-    padding-left: 30px;
+    @media (min-width: 767px) {
+      padding-left: 30px;
+    }
   }
 }
 
 .about {
   margin: 170px 0;
+
+  @media (max-width: 767px) {
+    margin: 50px 0;
+  }
 
   &__left {
     text-align: center;
@@ -102,7 +204,11 @@
 
       img {
         &:first-child {
-          max-width: 450px;
+          width: 450px;
+
+          @media (max-width: 767px) {
+            margin-bottom: 30px;
+          }
         }
 
         &:last-child {
@@ -162,6 +268,11 @@
         letter-spacing: 0.02em;
         color: #fff;
         margin: 0;
+
+        @media (max-width: 767px) {
+          font-size: 12px;
+          line-height: 24px;
+        }
       }
     }
   }
@@ -172,6 +283,12 @@
 
   &__list {
     margin: 60px 0 110px 0;
+
+    .col-lg-3 {
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__item {
@@ -219,6 +336,10 @@
     background-color: $color-blue-bg;
     padding: 80px 0;
     border-radius: 25px;
+
+    @media (max-width: 991px) {
+      border-radius: 0;
+    }
   }
 
   &__list {
@@ -233,6 +354,11 @@
     align-items: center;
     margin-bottom: 14px;
 
+    @media (max-width: 575px) {
+      background: transparent;
+      align-items: flex-start;
+    }
+
     p {
       margin-left: 25px;
       font-size: 15px;
@@ -245,11 +371,21 @@
 
   &__button {
     margin-top: 36px;
+
+    .btn {
+      @media (max-width: 575px) {
+        width: 90%;
+      }
+    }
   }
 }
 
 .advantages {
   margin: 100px 0 130px 0;
+
+  @media (max-width: 767px) {
+    margin: 40px 0 55px 0;
+  }
 
   &__list {
     margin-top: 40px;
@@ -258,6 +394,10 @@
   &__item {
     display: inline-flex;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
 
     span {
       margin-top: 25px;
@@ -272,12 +412,17 @@
 }
 
 .features {
+  overflow: hidden;
+
   .headline--padding {
     max-width: 550px;
   }
 
   &__list {
-    margin-top: 70px;
+    @media (min-width: 767px) {
+      margin-top: 70px;
+    }
+
   }
 
   &__desc {
@@ -291,10 +436,19 @@
       line-height: 28px;
       letter-spacing: 0.02em;
       color: #000000;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
   }
 
   &__item {
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+
     img {
       min-width: 100%;
       width: 100%;
@@ -303,29 +457,60 @@
     .headline {
       font-size: 30px;
       line-height: 40px;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 35px;
+      }
     }
 
     &--odd {
       .left {
-        text-align: right;
+        @media (min-width: 767px) {
+          text-align: right;
+        }
 
         .features__desc {
           padding: 90px 60px 0 0;
+
+          @media (max-width: 767px) {
+            padding: 20px 0px 0 0;
+          }
         }
       }
 
       .right {
         padding-right: 0;
+
+        img {
+          @media (max-width: 575px) {
+            transform: translateX(45%);
+          }
+        }
       }
     }
 
     &--even {
       .features__desc {
         padding: 90px 0 0 60px;
+
+        @media (max-width: 767px) {
+          padding: 20px 0px 0 0;
+        }
       }
 
       .left {
         padding-left: 0;
+
+        @media (max-width: 991px) {
+          order: 1;
+        }
+
+        img {
+          @media (max-width: 575px) {
+            transform: translateX(-45%);
+          }
+        }
       }
     }
 
@@ -344,10 +529,20 @@
     .headline {
       font-size: 22px;
 
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+      }
+
       &:after {
         content: url('img/blue-dots.svg');
         display: block;
         margin: -5px 0 -10px 0;
+
+        @media (max-width: 767px) {
+          margin: 10px 0;
+        }
       }
     }
 
@@ -357,12 +552,21 @@
       line-height: 26px;
       letter-spacing: 0.02em;
       color: $color-gray-menu;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
   }
 }
 
 .latest {
   margin-top: 110px;
+
+  @media (max-width: 767px) {
+    margin-top: 35px;
+  }
 
   &__item {
     margin-top: 55px;
@@ -372,12 +576,21 @@
     overflow: hidden;
     background: #F7F7F7;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
     .headline {
       font-weight: normal;
       font-size: 30px;
       line-height: 40px;
       margin: 20px 0 30px 0;
       max-width: 345px;
+
+      @media (max-width: 767px) {
+        font-size: 22px;
+        line-height: 33px;
+      }
     }
 
     .left {
@@ -388,12 +601,21 @@
       justify-content: center;
       align-items: center;
       width: 50%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     .right {
       width: 50%;
       height: 100%;
       background: url('img/temp/latest.jpg') top/cover no-repeat;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        background-position: center;
+      }
     }
 
   }
@@ -403,10 +625,18 @@
   margin-top: 125px;
   margin-bottom: 120px;
 
+  @media (max-width: 767px) {
+    margin: 70px 0 -2px 0;
+  }
+
   .container-wrapper {
     background: url('img/form-bg.svg') top/cover no-repeat;
     padding: 70px 0;
     border-radius: 25px;
+
+    @media (max-width: 767px) {
+      border-radius: 0;
+    }
   }
 
   form {
@@ -414,11 +644,19 @@
     max-width: 455px;
     margin: 55px auto 0 auto;
 
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+
     label {
       font-size: 16px;
       line-height: 26px;
       letter-spacing: 0.02em;
       color: #FFFFFF;
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
 
       span {
         color: #ff5b5b;
@@ -442,6 +680,10 @@
       line-height: 26px;
       letter-spacing: 0.02em;
       color: #99A0B0;
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
     }
 
     .btn[type="submit"] {

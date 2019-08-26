@@ -1,9 +1,8 @@
 <section class="form">
   <div class="container-wrapper">
-    <h3 class="headline align-center headline--white">Be up and running in minutes</h3>
-    <span class="headline-text align-center">Questions? Schedule some time to talk with one of our experts.</span>
-
     <div class="container">
+      <h3 class="headline align-center headline--white">Be up and running in minutes</h3>
+      <span class="headline-text align-center">Questions? Schedule some time to talk with one of our experts.</span>
 
       <form>
         <div class="form-group">
