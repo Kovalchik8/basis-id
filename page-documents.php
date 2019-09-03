@@ -1,16 +1,11 @@
 <?php /* Template Name: Documents */ ?>
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
 <section class="documents">
-  <div class="documents__hero">
-    <div class="container">
-      <h1 class="title">Documents</h1>
-      <p>Philosophy of BASIS ID is to treat data as a value. Personal data is a personal value! We guarantee full
-        compliance with FATF, MAS, GDPR, FINMA, FCA and CySEC requirements.</p>
-    </div>
-  </div>
 
-  <div class="documents__list container">
+  <?php the_content(); ?>
+
+  <!-- <div class="documents__list container">
 
     <div class="item">
       <div class="thumb"
@@ -84,7 +79,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
 
   <?php get_template_part('components/component', 'form'); ?>
 
@@ -101,7 +96,7 @@
             <div class="headline headline--small">POP UP Title for 2 rows maximum</div>
             <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML.</p>
             <input type="email" name="email" placeholder="Type your email">
-            <a href="#" class="btn btn--pink">Download</a>
+            <a href="" class="btn btn--pink" download>Download</a>
           </div>
           <div class="modal-download__right">
           </div>

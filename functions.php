@@ -21,4 +21,12 @@ add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
   return $exclude_filters;
 });
 
+// max-width for Gutenberg
+function custom_admin_css() {
+  echo '<style type="text/css">
+  .wp-block { max-width: 700px; }
+  </style>';
+  }
+  add_action('admin_head', 'custom_admin_css');
+
 require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf

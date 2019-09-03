@@ -6,6 +6,8 @@ class Main {
     this.scroll_to_form = $('.scroll-to-form')
     this.tabs = $('.section-tabs__tabs')
     this.tabs_link = $('.section-tabs__tabs .nav-link')
+    this.modal_toggler = $('a[data-target="#downloadModal"]')
+    this.modal = $('#downloadModal')
     this.events()
   }
 
@@ -14,6 +16,7 @@ class Main {
     this.tabs_link.on('click', this.tab_link_onClick)
     this.learn_more_btn.on('click', this.learn_more_btn_onClick)
     this.scroll_to_form.on('click', this.scroll_to_form_onClick)
+    this.modal_toggler.on('click', this.modal_toggler_onClick.bind(this))
     $(window).on('load', this.window_onLoad.bind(this))
   }
 
@@ -37,6 +40,17 @@ class Main {
           : this.tabs.removeClass('section-tabs__tabs--sticky')
       })
     }
+  }
+
+  modal_toggler_onClick(e) {
+    var target = $(e.target).closest('.item'),
+      image_url = target.find('.thumb').css('background')
+    this.modal.find('.modal-download__right').css({
+      background: image_url
+    })
+    this.modal.find('.headline').text(target.find('.headline').text())
+    this.modal.find('.modal-download__left p').text(target.find('p').text())
+    this.modal.find('.btn').attr('href', target.attr('data-document'))
   }
 
   scroll_to_form_onClick(e) {

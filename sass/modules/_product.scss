@@ -148,7 +148,8 @@
           padding-left: 60px;
         }
 
-        span {
+        span,
+        strong {
           color: #000;
           font-family: $font-manrope-bold;
 
@@ -173,13 +174,17 @@
         }
 
         &--pink {
-          span::before {
+
+          span::before,
+          strong::before {
             color: #FFC7D4;
           }
         }
 
         &--blue {
-          span::before {
+
+          span::before,
+          strong::before {
             color: #9BB1FF;
           }
         }
@@ -388,9 +393,7 @@
         }
 
         &>div {
-          @media (max-width: 768px) {
-            margin-bottom: 20px;
-          }
+          margin-bottom: 20px;
         }
       }
 

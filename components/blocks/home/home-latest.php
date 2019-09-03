@@ -9,7 +9,9 @@
             <h2 class="headline"><?php echo get_field('home_latest-article') ?></h2>
             <a href="<?php echo get_field('home_latest-link') ?>" class="btn btn--blue">Read the story</a>
           </div>
-          <div class="right"></div>
+          <div class="right"
+            style="background: url('<?php echo get_field('home_latest-image') ?> ') top/cover no-repeat;">
+          </div>
         </div>
       </div>
     </div>

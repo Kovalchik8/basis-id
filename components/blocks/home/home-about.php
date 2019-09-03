@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-6 about__left">
         <div class="img-wrapper">
-          <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/temp/about-hands.png') ?>" alt="about">
-          <a href="#">
+          <img class="img-fluid" src="<?php echo get_field('home_about-image') ?>" alt="about">
+          <a href="<?php echo get_field('home_about-link') ?>">
             <svg width="30" height="51" viewBox="0 0 30 51" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M29.5 25.5L0 0V51L29.5 25.5Z" fill="#2E5BFF" />
               <path d="M29.5 25.5L0 0V51L29.5 25.5Z" fill="url(#paint0_linear)" fill-opacity="0.228" />

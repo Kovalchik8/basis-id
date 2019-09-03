@@ -306,6 +306,8 @@ code.plaintext {
 
 .img-90proc-768 {
   img {
+    width: 100%;
+
     @media (max-width: 768px) {
       width: 90%;
     }
