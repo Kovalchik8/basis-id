@@ -40,7 +40,7 @@
 <section class="section-tabs section-tabs--product product">
 
   <div class="container product__tabs">
-    <ul class="nav nav-pills section-tabs__tabs" id="pills-tab" role="tablist">
+    <ul class="nav section-tabs__tabs" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="pills-first-tab" data-toggle="pill" href="#pills-first" role="tab"
           aria-controls="pills-first" aria-selected="true">КYC/ AML</a>
@@ -62,14 +62,14 @@
 
   <div class="tab-content" id="pills-tabContent">
 
-    <div class="tab-pane show active bg-blue-light fade product__first-pane" id="pills-first" role="tabpanel"
+    <div class="tab-pan bg-blue-light product__first-pan" id="pills-first" role="tabpanel"
       aria-labelledby="pills-home-tab">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
 
             <h2 class="headline headline--blue-line">КYC/ AML by BASIS ID</h2>
-            <span class="tab-pane__desc">
+            <span class="tab-pan__desc">
               The BASIS ID KYC & AML solution is a personal data management platform that performs the processing of the
               identity dataset and provides powerful personal data management tools.
             </span>
@@ -116,8 +116,12 @@
 
           </div>
 
-          <div class="col-md-6">
-            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/pane-1/right.png') ?>" alt="right">
+          <div class="col-md-6 align-center-768 img-90proc-768">
+            <picture>
+              <img
+                srcset="<?php echo get_theme_file_uri('/img/product/pane-1/right.png') ?> 1920w, <?php echo get_theme_file_uri('/img/product/pane-1/right-2x.png') ?> 3840w"
+                class="img-fluid">
+            </picture>
           </div>
 
         </div>
@@ -177,8 +181,7 @@
 
     </div>
 
-    <div class="tab-pane fade product__second-pane" id="pills-second" role="tabpanel"
-      aria-labelledby="pills-profile-tab">
+    <div class="tab-pan product__second-pan" id="pills-second" role="tabpanel" aria-labelledby="pills-profile-tab">
       <div class="container">
         <h2 class="headline headline--blue-line">Compliance with BASIS ID platform</h2>
         <div class="row list">
@@ -230,7 +233,7 @@
             <h3 class="headline">The compliance platform of BASIS ID is a powerful all-in-one instrument for the risk &
               compliance managers.
             </h3>
-            <div class="tab-pane__desc">
+            <div class="tab-pan__desc">
               Observe and control the process of the customer onboarding in real-time. Set the rules the system will
               follow, ask customers to digitally sign necessary documents, conduct enhanced due diligence and generate
               reports
@@ -241,21 +244,25 @@
               <li>No more micro-service Frankenstains</li>
             </ul>
           </div>
-          <div class="col-md-6">
-            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/pane-2/right.png') ?>" alt="right">
+          <div class="col-md-6 align-center-768 img-90proc-768">
+            <picture>
+              <img
+                srcset="<?php echo get_theme_file_uri('/img/product/pane-2/right.png') ?> 1920w, <?php echo get_theme_file_uri('/img/product/pane-2/right-2x.png') ?> 3840w"
+                class="img-fluid">
+            </picture>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div class="tab-pane fade bg-blue-light product__third-pane" id="pills-third" role="tabpanel"
+    <div class="tab-pan bg-blue-light product__third-pan" id="pills-third" role="tabpanel"
       aria-labelledby="pills-third-tab">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <h2 class="headline headline--blue-line">Documents verification by BASIS ID</h2>
-            <div class="tab-pane__desc">
+            <div class="tab-pan__desc">
               The document verification processing based on the machine learning algorythms is verifying more than 1500
               documents across the world in the automatic mode.
             </div>
@@ -288,14 +295,18 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/product/pane-3/right.png') ?>" alt="right">
+          <div class="col-md-6 align-center-768 img-90proc-768">
+            <picture>
+              <img
+                srcset="<?php echo get_theme_file_uri('/img/product/pane-3/right.png') ?> 1920w, <?php echo get_theme_file_uri('/img/product/pane-3/right-2x.png') ?> 3840w"
+                class="img-fluid">
+            </picture>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="tab-pane fade product__forth-pane" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
+    <div class="tab-pan product__forth-pan" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
 
       <div class="container-fluid email align-center">
         <div class="email__content">

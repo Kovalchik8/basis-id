@@ -20,3 +20,5 @@ add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
   $exclude_filters[] = 'themes/basis/node_modules';
   return $exclude_filters;
 });
+
+require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf

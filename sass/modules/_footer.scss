@@ -39,6 +39,10 @@
               color: $color-pink-hover;
               text-decoration: none;
             }
+
+            &:active {
+              opacity: .7;
+            }
           }
         }
 
@@ -109,6 +113,14 @@
             line-height: 17px;
             color: #fff;
             display: inline-block;
+
+            &:hover {
+              color: $color-pink-hover;
+            }
+
+            &:active {
+              opacity: .7;
+            }
           }
         }
       }

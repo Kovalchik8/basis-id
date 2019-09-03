@@ -12,7 +12,11 @@
         </p>
       </div>
       <div class="col-md-6 hero__right">
-        <img class="img-fluid" src="<?php echo get_theme_file_uri('/img/hero-right-about.png') ?>" alt="right">
+        <picture>
+          <img
+            srcset="<?php echo get_theme_file_uri('/img/hero-right-about.png') ?> 1920w, <?php echo get_theme_file_uri('/img/hero-right-about-2x.png') ?> 3840w"
+            class="img-fluid">
+        </picture>
       </div>
     </div>
   </div>

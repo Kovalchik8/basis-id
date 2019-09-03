@@ -127,6 +127,8 @@
 
 .about-features {
   .features__list {
+    margin-top: 60px;
+
     @media (max-width: 991px) {
       margin-top: 10px;
     }
@@ -173,6 +175,12 @@
       .left {
         @media (max-width: 991px) {
           padding-right: 0;
+        }
+
+        img {
+          @media (max-width: 576px) {
+            left: 0;
+          }
         }
       }
     }
@@ -238,8 +246,20 @@
     &:hover {
       background: #F4F4F4;
 
-      i {
+      i.fa-twitter {
         color: #00C2FF;
+      }
+
+      i.fa-facebook-square {
+        color: #4968B4;
+      }
+
+      i.fa-linkedin-in {
+        color: #2878B7;
+      }
+
+      i.fa-medium-m {
+        color: #000;
       }
     }
 

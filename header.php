@@ -20,7 +20,9 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php if (is_page('faq') ) { echo 'data-spy="scroll" data-target="#faq-nav" data-offset="250"'; }  ?>>
+<?php $spy_target = (is_page('faq') ) ? '#faq-nav' : '.section-tabs__tabs' ?>
+
+<body data-spy="scroll" data-target="<?php echo $spy_target ?>" data-offset="250">
 
   <header class="header">
     <nav class="navbar navbar-expand-lg">
@@ -58,7 +60,7 @@
               <a class="nav-link" href="<?php echo site_url('/faq') ?>">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('/blog') ?>">Blog</a>
+              <a class="nav-link" target="_blank" href="https://blog.basisid.com/">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('about-us') ?>">About Us</a>

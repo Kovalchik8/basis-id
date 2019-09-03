@@ -11,12 +11,14 @@
 .product {
 
   &__tabs {
+    height: 135px;
+
     @media (max-width: 768px) {
       display: none;
     }
   }
 
-  &__first-pane {
+  &__first-pan {
 
     .col-md-6:last-child {
       img {
@@ -129,7 +131,7 @@
     }
   }
 
-  &__second-pane {
+  &__second-pan {
     .list {
       margin-top: 20px;
 
@@ -237,7 +239,7 @@
     }
   }
 
-  &__third-pane {
+  &__third-pan {
     .gray-note {
       font-size: 28px;
       line-height: 139.9%;
@@ -319,8 +321,8 @@
     }
   }
 
-  &__forth-pane {
-    &.tab-pane {
+  &__forth-pan {
+    &.tab-pan {
       padding-top: 0;
       padding-bottom: 0;
     }
