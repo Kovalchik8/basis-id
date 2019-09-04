@@ -2,6 +2,7 @@ class Main {
   constructor() {
     this.faq_nav = $('.faq .left')
     this.faq_nav_link = $('.faq .left__item a')
+    this.accordion_point = $('.point__accordion button')
     this.learn_more_btn = $('.hero .buttons a')
     this.scroll_to_form = $('.scroll-to-form')
     this.tabs = $('.section-tabs__tabs')
@@ -17,20 +18,23 @@ class Main {
     this.learn_more_btn.on('click', this.learn_more_btn_onClick)
     this.scroll_to_form.on('click', this.scroll_to_form_onClick)
     this.modal_toggler.on('click', this.modal_toggler_onClick.bind(this))
+    this.accordion_point.on('click', this.accordion_point_onClick.bind(this))
     $(window).on('load', this.window_onLoad.bind(this))
   }
 
-  window_onLoad() {
-    if (this.faq_nav.length && $(window).outerWidth() > 767) {
-      var footer_top = $('.footer').offset().top
-      var left_top = this.faq_nav.outerHeight()
+  accordion_point_onClick(e) {
+    setTimeout(() => {
+      this.calculate_faq_nav()
+    }, 400)
+  }
 
-      $(window).scroll(e => {
-        $(window).scrollTop() > footer_top - (left_top + 79 + 150)
-          ? this.faq_nav.addClass('left--absolute')
-          : this.faq_nav.removeClass('left--absolute')
-      })
-    }
+  window_onLoad() {
+    this.calculate_faq_nav()
+
+    $('[data-toggle="tooltip"]').tooltip({
+      placement: $(window).outerWidth() > 767 ? 'right' : 'top',
+      trigger: 'manual'
+    })
 
     if ($(window).outerWidth() > 767 && this.tabs.length) {
       var tabs_top = this.tabs.offset().top
@@ -38,6 +42,23 @@ class Main {
         $(window).scrollTop() > tabs_top - 50
           ? this.tabs.addClass('section-tabs__tabs--sticky')
           : this.tabs.removeClass('section-tabs__tabs--sticky')
+      })
+    }
+  }
+
+  calculate_faq_nav() {
+    if (this.faq_nav.length && $(window).outerWidth() > 767) {
+      var footer_top = $('.footer').offset().top
+      var nav_height = this.faq_nav.outerHeight()
+
+      $(window).scrollTop() > footer_top - (nav_height + 79 + 150)
+        ? this.faq_nav.addClass('left--absolute')
+        : this.faq_nav.removeClass('left--absolute')
+
+      $(window).scroll(e => {
+        $(window).scrollTop() > footer_top - (nav_height + 79 + 150)
+          ? this.faq_nav.addClass('left--absolute')
+          : this.faq_nav.removeClass('left--absolute')
       })
     }
   }

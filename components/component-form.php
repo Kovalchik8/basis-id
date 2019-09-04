@@ -7,23 +7,23 @@
       <form>
         <div class="form-group">
           <label>Your Name <span>*</span></label>
-          <input type="text" class="form-control" placeholder="Type your name">
+          <input type="text" name="name" class="form-control" placeholder="Type your name" data-toggle="tooltip">
         </div>
         <div class="form-group">
           <label>Your Email <span>*</span></label>
-          <input type="email" class="form-control" placeholder="Type your email">
+          <input type="email" name="email" class="form-control" placeholder="Type your email" data-toggle="tooltip">
         </div>
         <div class="form-group">
           <label>Your Phone <span>*</span></label>
-          <input type="tel" class="form-control" placeholder="Type your Phone">
+          <input type="tel" name="phone" class="form-control" placeholder="Type your Phone" data-toggle="tooltip">
         </div>
         <div class="form-group">
           <label>Your Company <span>*</span></label>
-          <input type="text" class="form-control" placeholder="Type your company">
+          <input type="text" name="company" class="form-control" placeholder="Type your company" data-toggle="tooltip">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Which industry or type of activity you have?</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select name="industry" class="form-control" id="exampleFormControlSelect1">
             <option disabled selected>Select your industry type</option>
             <option>1</option>
             <option>2</option>

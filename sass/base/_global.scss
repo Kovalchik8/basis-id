@@ -313,3 +313,40 @@ code.plaintext {
     }
   }
 }
+
+.tooltip {
+  top: -80px !important;
+  opacity: 1 !important;
+  box-shadow: 0px 3px 10px rgba(0, 10, 255, 0.15);
+  border-radius: 5px;
+
+  .tooltip-inner {
+    background: #FF577F;
+    font-family: $font-manrope-regular;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+
+.bs-tooltip-right {
+  top: -80px !important;
+
+  .arrow {
+    &:before {
+      border-right-color: #FF577F;
+    }
+  }
+
+}
+
+.bs-tooltip-top {
+  top: -80px !important;
+
+  .arrow {
+    &:before {
+      border-top-color: #FF577F;
+    }
+  }
+
+}

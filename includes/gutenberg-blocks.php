@@ -7,7 +7,9 @@ function register_acf_block_types() {
     'home' => array('hero', 'about', 'partners', 'help', 'explain', 'advantages', 'features', 'more', 'latest'),
     'documents' => array('hero', 'list'),
     'about' => array('hero', 'desc', 'press', 'features', 'social'),
-    'product' => array('hero', 'pills')
+    'product' => array('hero', 'pills'),
+    'compliance' => array('hero', 'pills'),
+    'faq' => array('list')
   );
 
   foreach($acf_blocks as $key=>$block) {

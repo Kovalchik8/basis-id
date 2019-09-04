@@ -15,6 +15,7 @@
     overflow-y: scroll;
     max-height: calc(100vh - 79px);
     background: #fff;
+    z-index: 99;
 
     @media (max-width: 768px) {
       position: static;
@@ -427,7 +428,9 @@
         align-items: center;
         margin-bottom: 20px;
 
-        .headline {
+
+        .headline,
+        p {
           margin: 0;
         }
       }
@@ -436,6 +439,12 @@
 
   .accordion {
     .card {
+
+      br,
+      p:empty {
+        display: none;
+      }
+
       @media (max-width: 768px) {
         border-left: none;
         border-right: none;

@@ -821,6 +821,15 @@
       padding-left: 20px;
     }
 
+    input,
+    select,
+    textarea {
+      &.error {
+        border: 1px solid #FF92AC;
+        background: #FFEDED;
+      }
+    }
+
     input::placeholder,
     textarea::placeholder,
     select {

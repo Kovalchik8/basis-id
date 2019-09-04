@@ -2,16 +2,23 @@
 
 // include css and js files
 function basis_files () {
-  wp_enqueue_style( 'explainer-main-stylesheet', get_stylesheet_uri(), NULL, microtime() );
+  wp_enqueue_style( 'basis-main-stylesheet', get_stylesheet_uri(), NULL, microtime() );
 
-  wp_enqueue_script( 'explainer-main-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, microtime(), true );
+  wp_enqueue_script( 'basis-main-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, microtime(), true );
   
-  wp_localize_script( 'explainer-main-js', 'explainerData', array(
+  wp_localize_script( 'basis-main-js', 'basisData', array(
     'admin_ajax' => admin_url('admin-ajax.php'),
   ));
 }
 
 add_action( 'wp_enqueue_scripts', 'basis_files' );
+
+function disable_wp_auto_p( $content ) {
+  remove_filter( 'the_content', 'wpautop' );
+  remove_filter( 'the_excerpt', 'wpautop' );
+  return $content;
+}
+add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 
 add_filter('show_admin_bar', '__return_false'); // hide wp admin bar when logged in
 
@@ -30,3 +37,4 @@ function custom_admin_css() {
   add_action('admin_head', 'custom_admin_css');
 
 require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf
+require_once get_theme_file_path('/includes/mail.php');

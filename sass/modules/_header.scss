@@ -1,15 +1,13 @@
 .header {
-  background: linear-gradient(
-      19.92deg,
+  background: linear-gradient(19.92deg,
       rgba(255, 255, 255, 0.228) 19.46%,
-      rgba(255, 255, 255, 0) 79.31%
-    ),
+      rgba(255, 255, 255, 0) 79.31%),
     #2e5bff;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999;
 
   .navbar {
     height: 80px;

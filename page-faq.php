@@ -1,6 +1,6 @@
 <?php /* Template Name: FAQ */ ?>
-<?php get_header(); ?>
-
+<?php get_header(); the_post(); the_content(); ?>
+<!-- 
 <section class="faq">
 
   <div class="left">
@@ -385,9 +385,9 @@ if ($signature == $inp['signature']) {
 
       </div> <!-- points -->
 
-    </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Hightlight js -->
