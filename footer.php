@@ -8,31 +8,29 @@
       </div>
 
       <div class="col-md-2 col-6 footer__nav">
-        <ul>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
+        <?php wp_nav_menu([ 
+          'theme_location'  => 'footer_company'
+        ]); ?>
       </div>
 
       <div class="col-md-2 col-6 footer__nav">
-        <ul>
-          <li><a href="#">Solution</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Compliance</a></li>
-          <li><a href="#">Documents</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
+        <?php wp_nav_menu([ 
+          'theme_location'  => 'footer_solution'
+        ]); ?>
       </div>
 
       <div class="col-md-4 footer__nav footer__nav--social">
+
         <ul>
-          <li><a href="#">Follow us</a></li>
-          <li><a href="#"><i class="fab fa-medium-m"></i></a></li>
-          <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a>Follow us</a></li>
+
+          <?php $menu_object = wp_get_nav_menu_object(5);
+            $menu_items = get_field('footer_social', $menu_object);
+
+          foreach ($menu_items as $item) { ?>
+          <li><a href="<?php echo $item['link'] ?>"><?php echo $item['icon'] ?></a></li>
+          <?php } ?>
+
         </ul>
       </div>
 
@@ -44,11 +42,9 @@
         BASIS ID uses 256-bit SSL encryption 100% of the time on every device.
       </div>
       <div class="right">
-        <ul>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Cookie policy </a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-        </ul>
+        <?php wp_nav_menu([ 
+          'theme_location'  => 'footer_bottom'
+        ]); ?>
       </div>
     </div>
 

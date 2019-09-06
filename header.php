@@ -36,38 +36,22 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
 
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="<?php echo site_url(); ?>">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">Products</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="<?php echo site_url('/product') ?>">Product</a>
-                <a class="dropdown-item" href="<?php echo site_url('/documents') ?>">Documents</a>
-                <a class="dropdown-item" href="#">Compliance</a>
-                <a class="dropdown-item" href="#">FAQ</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('/documents') ?>">Documents</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('/compliance') ?>">Compliance</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('/faq') ?>">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://blog.basisid.com/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('about-us') ?>">About Us</a>
-            </li>
-          </ul>
+          <?php 
+        
+          wp_nav_menu( array(
+            'theme_location'  => 'primary',
+            'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+            'container'       => '',
+            'menu_class'      => 'navbar-nav mr-auto mt-2 mt-lg-0',
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'          => new WP_Bootstrap_Navwalker(),
+          ));
+          
+          ?>
 
-          <button class="btn btn--white scroll-to-form">Get in touch</button>
+          <?php if (!is_page('faq') && !is_page_template( 'page.php' )) { ?>
+          <button class="btn btn--white scroll-to-form navbar__to-form">Get in touch</button>
+          <?php } ?>
 
         </div>
 

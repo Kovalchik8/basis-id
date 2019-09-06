@@ -99,7 +99,7 @@ class Mail {
   animate_to_form() {
     $('html, body').animate(
       {
-        scrollTop: $('form').offset().top - 100
+        scrollTop: $('.form form').offset().top - 175
       },
       500
     )

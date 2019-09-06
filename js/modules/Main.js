@@ -9,6 +9,7 @@ class Main {
     this.tabs_link = $('.section-tabs__tabs .nav-link')
     this.modal_toggler = $('a[data-target="#downloadModal"]')
     this.modal = $('#downloadModal')
+    this.faq_object_loader = $('.faq__object i')
     this.events()
   }
 
@@ -29,7 +30,13 @@ class Main {
   }
 
   window_onLoad() {
+    if (this.faq_object_loader.length) this.faq_object_loader.remove()
+
     this.calculate_faq_nav()
+
+    $('.footer__nav li:first-child a').on('click', function(e) {
+      e.preventDefault()
+    })
 
     $('[data-toggle="tooltip"]').tooltip({
       placement: $(window).outerWidth() > 767 ? 'right' : 'top',
@@ -76,7 +83,8 @@ class Main {
 
   scroll_to_form_onClick(e) {
     e.preventDefault()
-    if ($(window).outerWidth() < 991) $('.navbar-toggler').trigger('click') // hide menu on mobile
+    if ($(window).outerWidth() < 991 && $(e.target).hasClass('navbar__to-form'))
+      $('.navbar-toggler').trigger('click') // hide menu on mobile
     $('html, body').animate(
       { scrollTop: $('section.form').offset().top - 80 },
       700

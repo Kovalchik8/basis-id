@@ -30,6 +30,11 @@
             font-size: 18px;
             line-height: 26px;
 
+            &:hover {
+              color: $color-gray-menu;
+              cursor: inherit;
+            }
+
           }
         }
 

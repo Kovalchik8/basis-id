@@ -84,6 +84,7 @@
 }
 
 .modal-download {
+  z-index: 10000;
 
   .modal-content {
     max-width: 780px;
@@ -180,6 +181,10 @@
     @media (max-width: 992px) {
       height: 165px;
       width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      background-position: center !important;
     }
   }
 }

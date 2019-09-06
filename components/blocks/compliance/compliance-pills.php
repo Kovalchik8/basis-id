@@ -8,8 +8,9 @@
       <?php foreach($pills as $key=>$pill) { $key++; ?>
 
       <li class="nav-item">
-        <a class="nav-link" id="pills-<?php echo $key ?>-tab" data-toggle="pill" href="#pills-<?php echo $key ?>"
-          role="tab" aria-controls="pills-<?php echo $key ?>" aria-selected="true"><?php echo $pill['pill_name'] ?></a>
+        <a class="nav-link <?php if ($key == 1) echo 'active' ?>" id="pills-<?php echo $key ?>-tab" data-toggle="pill"
+          href="#pills-<?php echo $key ?>" role="tab" aria-controls="pills-<?php echo $key ?>"
+          aria-selected="true"><?php echo $pill['pill_name'] ?></a>
       </li>
 
       <?php } ?>

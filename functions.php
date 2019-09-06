@@ -36,5 +36,15 @@ function custom_admin_css() {
   }
   add_action('admin_head', 'custom_admin_css');
 
+// menu
+register_nav_menus( array(
+  'primary' => __( 'Primary Menu', 'Basis' ),
+  'footer_company' => __( 'Footer Company Menu', 'Basis' ),
+  'footer_solution' => __( 'Footer Solution Menu', 'Basis' ),
+  'footer_social' => __( 'Footer Social Menu', 'Basis' ),
+  'footer_bottom' => __( 'Footer Bottom Menu', 'Basis' ),
+));
+
 require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf
+require_once get_theme_file_path('/includes/class-wp-bootstrap-navwalker.php'); // menu
 require_once get_theme_file_path('/includes/mail.php');

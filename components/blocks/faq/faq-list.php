@@ -6,7 +6,7 @@
     <ul class="left__list list-group" id="faq-nav">
       <li class="left__item left__item--head">
         <div class="left__wrapper">
-          <span>Widget demo</span>
+          <span><?php echo get_field('faq_list-title-nav') ?></span>
         </div>
       </li>
 
@@ -45,24 +45,18 @@
   <div class="right">
     <div class="right__top align-center">
       <div class="wrapper">
+
         <div class="note">
-          To verify your documents, identity and gain verification experience from BASIS ID, use the widget below. You
-          will receive verification results by email within 24 hours.</div>
+          <?php echo get_field('faq_list-text') ?></div>
 
-        <div class="faq__card">
-          <div class="content">
-            <img src="<?php echo get_theme_file_uri('/img/faq/icon.svg') ?>" alt="user">
-            <h2 class="headline headline--manrope">Welcome! Let’s start
-              verification
-            </h2>
-            <span>You will need to answer a few simple questions to complete registration.</span>
-            <a class="btn btn--blue-gradient" href="#">Let's go</a>
-          </div>
+        <div class="faq__object">
+          <i class="fas fa-circle-notch fa-3x rotating"></i>
+          <object type="text/html"
+            data="https://europe-api.baasisid.com/auth/ui/key/65596335521167430000/multi?orig=https%3A%2F%2Fwww.baasisid.com&api_form_token=a7bfcd1b-f4a6-43d8-a119-a98de27165b6#/"
+            width="100%" style="max-width:100%" height="750px" style="overflow:auto;">
+          </object>
         </div>
 
-        <div class="powered-by">
-          <img src="<?php echo get_theme_file_uri('/img/faq/powered-by.svg') ?>" alt="powered-by">
-        </div>
       </div>
     </div>
 
