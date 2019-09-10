@@ -72,12 +72,30 @@ class Main {
 
   modal_toggler_onClick(e) {
     var target = $(e.target).closest('.item'),
-      image_url = target.find('.thumb').css('background')
+      image_url = target.attr('data-modal-image')
+        ? `url('${target.attr('data-modal-image')}')`
+        : target.find('.thumb').css('background-image')
+
     this.modal.find('.modal-download__right').css({
-      background: image_url
+      backgroundImage: image_url
     })
-    this.modal.find('.headline').text(target.find('.headline').text())
-    this.modal.find('.modal-download__left p').text(target.find('p').text())
+
+    this.modal
+      .find('.headline')
+      .text(
+        target.attr('data-modal-title')
+          ? target.attr('data-modal-title')
+          : target.find('.headline').text()
+      )
+
+    this.modal
+      .find('.modal-download__left p')
+      .text(
+        target.attr('data-modal-text')
+          ? target.attr('data-modal-text')
+          : target.find('p').text()
+      )
+
     this.modal.find('.btn').attr('href', target.attr('data-document'))
   }
 

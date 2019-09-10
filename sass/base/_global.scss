@@ -373,3 +373,39 @@ code.plaintext {
 .rotating {
   animation: rotating 1.5s linear infinite;
 }
+
+.modal {
+  z-index: 10000;
+}
+
+// section hook
+.hook {
+  padding: 150px 0 80px 0;
+  background: linear-gradient(180deg, #e9edff, #fafbff);
+
+  @media (max-width: 768px) {
+    padding: 75px 0;
+  }
+
+  .note {
+    font-family: $font-manrope-regular;
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    text-align: center;
+    margin: 0 15px;
+
+    span {
+      max-width: 825px;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      background: linear-gradient(180deg, #E9EDFF 0%, #FAFBFF 100%);
+      padding: 40px 30px;
+      margin: 0 -15px;
+    }
+  }
+}

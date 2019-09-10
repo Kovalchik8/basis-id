@@ -1,6 +1,7 @@
 class Mail {
   constructor() {
     this.submit_btn = $('.form button[type=submit]')
+    this.submit_btn_text = this.submit_btn.text()
     this.events()
   }
 
@@ -11,37 +12,89 @@ class Mail {
   submit_btn_OnClick(e) {
     e.preventDefault()
 
-    var form = this.submit_btn.closest('form')
+    var form = this.submit_btn.closest('form'),
+      form_input = [],
+      form_select = [],
+      form_textarea = []
 
     var data = {
       action: 'send_mail',
-      name: form.find('input[name=name]').val(),
-      email: form.find('input[name=email]').val(),
-      phone: form.find('input[name=phone]').val(),
-      company: form.find('input[name=company]').val(),
-      message: form.find('textarea').val()
+      fields: []
     }
 
-    // validation
-    if (data.email && !this.validate_email(data.email)) data.email = 'invalid'
-    if (data.phone && !this.validate_phone(data.phone)) data.phone = 'invalid'
+    // all input data
+    form.find('input:not([type=submit])').each(function(index) {
+      form_input.push({
+        obj: $(this),
+        name: $(this).attr('name'),
+        type: $(this).attr('type'),
+        value: $(this).val(),
+        required: $(this).attr('data-required')
+      })
+    })
 
-    // check inputs (might be invalid or empty)
-    if (
-      !data.name ||
-      !data.email ||
-      !data.phone ||
-      !data.company ||
-      data.email == 'invalid' ||
-      data.phone == 'invalid'
-    ) {
-      this.check_input(form.find('input[name=name]'), data.name, true)
-      this.check_input(form.find('input[name=email]'), data.email, true)
-      this.check_input(form.find('input[name=phone]'), data.phone, true)
-      this.check_input(form.find('input[name=company]'), data.company, true)
+    // all select data
+    form.find('select').each(function(index) {
+      form_select.push({
+        name: $(this).attr('name'),
+        value: $(this).val(),
+        required: $(this).attr('data-required')
+      })
+    })
 
+    // all textarea data
+    form.find('textarea').each(function(index) {
+      form_textarea.push({
+        name: $(this).attr('name'),
+        value: $(this).val(),
+        required: $(this).attr('data-required')
+      })
+    })
+
+    // check all inputs (can be invalid or empty)
+    for (let input of form_input) {
+      if (
+        input.type == 'email' &&
+        input.value &&
+        !this.validate_email(input.value)
+      )
+        input.value = 'invalid'
+      if (
+        input.type == 'tel' &&
+        input.value &&
+        !this.validate_phone(input.value)
+      )
+        input.value = 'invalid'
+
+      this.check_input(input.obj, input.value, input.required == 'required')
+    }
+
+    // check if inputs with error exist
+    if (form.find('input.error').length) {
       this.animate_to_form()
       return
+    }
+
+    // get all form data for ajax call
+    for (let input of form_input) {
+      data.fields.push({
+        name: input.name,
+        value: input.value
+      })
+    }
+
+    for (let select of form_select) {
+      data.fields.push({
+        name: select.name,
+        value: select.value
+      })
+    }
+
+    for (let textarea of form_textarea) {
+      data.fields.push({
+        name: textarea.name,
+        value: textarea.value
+      })
     }
 
     this.submit_btn.text('Sending...')
@@ -52,21 +105,18 @@ class Mail {
         // clean all inputs
         if (result == 'Success') {
           form.find('input:not([type=submit])').each(function(index) {
-            $(this)
-              .val('')
-              .removeClass('error')
-              .tooltip('hide')
+            $(this).val('')
           })
           form.find('textarea').val('')
         }
         setTimeout(() => {
-          this.submit_btn.text('Send your request')
+          this.submit_btn.text(this.submit_btn_text)
         }, 3000)
       }, 2000)
     })
   }
 
-  // check whether input isn't empty or invalid after submit
+  // check if input isn't empty or invalid after submit
   check_input(input, input_value, required = false) {
     if ((required && !input_value) || input_value == 'invalid') {
       input

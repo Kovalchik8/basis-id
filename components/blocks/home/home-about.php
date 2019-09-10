@@ -4,7 +4,7 @@
       <div class="col-md-6 about__left">
         <div class="img-wrapper">
           <img class="img-fluid" src="<?php echo get_field('home_about-image') ?>" alt="about">
-          <a href="<?php echo get_field('home_about-link') ?>">
+          <a data-toggle="modal" data-target="#videoModal">
             <svg width="30" height="51" viewBox="0 0 30 51" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M29.5 25.5L0 0V51L29.5 25.5Z" fill="#2E5BFF" />
               <path d="M29.5 25.5L0 0V51L29.5 25.5Z" fill="url(#paint0_linear)" fill-opacity="0.228" />
@@ -30,3 +30,15 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal modal-video fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog"
+  aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="modalVideoBody">
+        <?php echo get_field('home_about-link'); ?>
+      </div>
+    </div>
+  </div>
+</div>

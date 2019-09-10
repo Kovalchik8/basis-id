@@ -20,10 +20,10 @@
 
     </div>
     <div class="buttons">
-      <button class="btn btn--pink scroll-to-form">Request a demo</button>
+      <button class="btn btn--pink scroll-to-form"><?php echo get_field('product_hero-btn-1') ?></button>
       <div class="buttons__wrapper">
         <span> or </span>
-        <a href="" class="">Learn more</a>
+        <a href="" class=""><?php echo get_field('product_hero-btn-2') ?></a>
       </div>
     </div>
   </div>

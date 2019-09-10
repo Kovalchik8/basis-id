@@ -6,10 +6,10 @@
         <p><?php echo get_field('home_hero-text') ?>
         </p>
         <div class="buttons">
-          <button class="btn btn--pink scroll-to-form">Get in touch</button>
+          <button class="btn btn--pink scroll-to-form"><?php echo get_field('home_hero-btn-1') ?></button>
           <div class="buttons__wrapper">
             <span> or </span>
-            <a href="">Learn more</a>
+            <a href=""><?php echo get_field('home_hero-btn-2') ?></a>
           </div>
         </div>
       </div>

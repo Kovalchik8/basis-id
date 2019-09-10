@@ -156,13 +156,13 @@
               <?php $bottom = $pill_third['bottom-1'] ?>
               <div class="bottom__item">
                 <h3 class="headline"><?php echo $bottom['title'] ?></h3>
-                <span><?php echo $bottom['text'] ?></span>
+                <span class="under-headline"><?php echo $bottom['text'] ?></span>
                 <?php echo $bottom['list'] ?>
               </div>
               <?php $bottom = $pill_third['bottom-2'] ?>
               <div class="bottom__item">
                 <h3 class="headline"><?php echo $bottom['title'] ?></h3>
-                <span><?php echo $bottom['text'] ?></span>
+                <span class="under-headline"><?php echo $bottom['text'] ?></span>
                 <?php echo $bottom['list'] ?>
               </div>
             </div>
@@ -183,18 +183,19 @@
     <div class="tab-pan product__forth-pan" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
 
       <div class="container-fluid email align-center">
+        <?php $form = $pill_forth['form']; ?>
         <div class="email__content">
-          <h3 class="headline headline--white"><?php echo $pill_forth['title'] ?></h3>
+          <h3 class="headline headline--white"><?php echo $form['title'] ?></h3>
           <form>
-            <input type="email" name="email" placeholder="Type your email for demo" required>
-            <button type="submit" class="btn btn--no-radius btn--pink">Plan a demo</button>
+            <input type="email" name="email" placeholder="<?php echo $form['placeholder'] ?>" required>
+            <button type="submit" class="btn btn--no-radius btn--pink"><?php echo $form['button-text'] ?></button>
           </form>
         </div>
       </div>
 
       <div class="cards">
         <div class="container">
-          <h3 class="headline align-center">Integrating the BASIS ID sulution is as easy as it gets</h3>
+          <h3 class="headline align-center"><?php echo $pill_forth['title'] ?></h3>
           <div class="row cards__list">
 
             <?php $cards = $pill_forth['cards'];

@@ -1,0 +1,5 @@
+.widefat thead th,
+.widefat tfoot th,
+.widefat tfoot td {
+  border: none !important;
+}

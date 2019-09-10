@@ -49,7 +49,7 @@
           
           ?>
 
-          <?php if (!is_page('faq') && !is_page_template( 'page.php' )) { ?>
+          <?php if (!is_page_template('page-faq.php') && !is_page_template( 'page.php' ) && !is_page_template( 'page-hook.php' )) { ?>
           <button class="btn btn--white scroll-to-form navbar__to-form">Get in touch</button>
           <?php } ?>
 

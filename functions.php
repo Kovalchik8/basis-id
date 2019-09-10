@@ -45,6 +45,18 @@ register_nav_menus( array(
   'footer_bottom' => __( 'Footer Bottom Menu', 'Basis' ),
 ));
 
+// admin css for post type basis_email
+function admin_style() {
+  if (get_post_type() == 'basis_email')
+    wp_enqueue_style('admin-styles', get_theme_file_uri('/includes/admin.css') );
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+// add option page from acf
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
 require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf
 require_once get_theme_file_path('/includes/class-wp-bootstrap-navwalker.php'); // menu
 require_once get_theme_file_path('/includes/mail.php');

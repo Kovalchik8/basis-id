@@ -50,6 +50,8 @@
         height: 202px;
         margin-right: 35px;
         flex-shrink: 0;
+        background-position: center;
+        background-size: cover;
       }
 
       .headline {
@@ -84,7 +86,6 @@
 }
 
 .modal-download {
-  z-index: 10000;
 
   .modal-content {
     max-width: 780px;
@@ -114,6 +115,7 @@
   &__left {
     padding: 50px 35px 90px 50px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
 
     @media (max-width: 992px) {
