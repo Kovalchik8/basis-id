@@ -9,8 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, settings.themeLocation + 'js'),
     filename: 'scripts-bundled.js'
   },
-  // mode: 'production',
-  mode: 'development',
+  mode: 'production',
+  // mode: 'development',
   module: {
     rules: [
       {

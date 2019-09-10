@@ -3,7 +3,7 @@
 class Mail {
   public function __construct() {
     
-    define('SEND_TO', 'koval4ik8@email.ua');
+    define('SEND_TO', get_field('form_recipient', 'option') );
 
     add_action('init', array($this, 'register_email_post_type') );
 
