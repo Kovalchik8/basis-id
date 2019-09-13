@@ -5,7 +5,7 @@
       <div class="offset-md-1 col-md-10">
         <div class="latest__item">
           <div class="left">
-            <span>Basis ID blog</span>
+            <span>BASIS ID blog</span>
             <h2 class="headline"><?php echo get_field('home_latest-article') ?></h2>
             <a href="<?php echo get_field('home_latest-link') ?>" class="btn btn--blue">Read the story</a>
           </div>

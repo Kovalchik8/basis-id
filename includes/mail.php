@@ -12,13 +12,22 @@ class Mail {
 
     add_action('wp_ajax_nopriv_send_mail', array($this, 'send_mail') );
     add_action('wp_ajax_send_mail', array($this, 'send_mail') );
+
+    add_action('wp_ajax_nopriv_send_simple_mail', array($this, 'send_simple_mail') );
+    add_action('wp_ajax_send_simple_mail', array($this, 'send_simple_mail') );
+  }
+
+  public function send_simple_mail() {
+    $headers  = "Content-type: text/html; charset=utf8 \r\n";
+    echo wp_mail(SEND_TO, $_POST['subject'], $_POST['message'], $headers) ? 'Success' : 'Error';
+    die();
   }
 
   public function send_mail() {
 
     $subject = 'Message from basis id web site';
     $headers  = "Content-type: text/html; charset=utf8 \r\n";
-    $name = $email = '';
+    $name = $email = $message = '';
 
     foreach($_POST['fields'] as $input) {
       if ($input['name'] == 'name') $name = $input['value'];
@@ -26,7 +35,7 @@ class Mail {
       $message .= '<b>' . $input['name'] . ':</b> ' . $input['value'] . '<br><br>'; 
     }
 
-    if ( mail(SEND_TO, $subject, $message, $headers) ) {
+    if ( wp_mail(SEND_TO, $subject, $message, $headers) ) {
       
       echo 'Success';
 
@@ -41,7 +50,9 @@ class Mail {
       ));
 
 
-    } else { echo 'Error'; }
+    } else {
+       echo 'Error'; 
+    }
 
     die();
   }
@@ -64,6 +75,7 @@ class Mail {
   }
 
   public function custom_email_columns( $defaults ) {
+    unset( $defaults['wpseo-links'] );
     unset( $defaults['date'] );
     $defaults['basis_email_email'] = '<a>Email</a>';
     $defaults['basis_email_date'] = '<a>Date and time</a>';

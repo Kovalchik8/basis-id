@@ -188,7 +188,8 @@
           <h3 class="headline headline--white"><?php echo $form['title'] ?></h3>
           <form>
             <input type="email" name="email" placeholder="<?php echo $form['placeholder'] ?>" required>
-            <button type="submit" class="btn btn--no-radius btn--pink"><?php echo $form['button-text'] ?></button>
+            <button id="simple_mail" type="submit"
+              class="btn btn--no-radius btn--pink"><?php echo $form['button-text'] ?></button>
           </form>
         </div>
       </div>

@@ -1,16 +1,60 @@
 class Mail {
   constructor() {
     this.submit_btn = $('.form button[type=submit]')
+    this.submit_simple_btn = $('#simple_mail')
+    this.submit_simple_text = this.submit_simple_btn.text()
     this.submit_btn_text = this.submit_btn.text()
+    this.simple_subject = $('.email__content h3').text()
+    this.is_email_sending = false
     this.events()
   }
 
   events() {
     this.submit_btn.on('click', this.submit_btn_OnClick.bind(this))
+    this.submit_simple_btn.on(
+      'click',
+      this.submit_simple_btn_onClick.bind(this)
+    )
+  }
+
+  submit_simple_btn_onClick(e) {
+    e.preventDefault()
+    if (this.is_email_sending) return
+
+    var input = this.submit_simple_btn.closest('form').find('input[type=email]')
+    var email = input.val()
+    if (!email.length || !this.validate_email(email)) {
+      input.addClass('error')
+      return
+    }
+
+    var data = {
+      action: 'send_simple_mail',
+      subject: this.simple_subject,
+      message: email
+    }
+
+    this.is_email_sending = true
+    this.submit_simple_btn.text('Sending...')
+
+    $.post(basisData.admin_ajax, data, result => {
+      setTimeout(() => {
+        this.submit_simple_btn.text(result)
+        // clean all inputs
+        if (result == 'Success') {
+          input.val('').removeClass('error')
+        }
+        setTimeout(() => {
+          this.submit_simple_btn.text(this.submit_simple_text)
+          this.is_email_sending = false
+        }, 3000)
+      }, 2000)
+    })
   }
 
   submit_btn_OnClick(e) {
     e.preventDefault()
+    if (this.is_email_sending) return
 
     var form = this.submit_btn.closest('form'),
       form_input = [],
@@ -97,6 +141,7 @@ class Mail {
       })
     }
 
+    this.is_email_sending = true
     this.submit_btn.text('Sending...')
 
     $.post(basisData.admin_ajax, data, result => {
@@ -111,6 +156,7 @@ class Mail {
         }
         setTimeout(() => {
           this.submit_btn.text(this.submit_btn_text)
+          this.is_email_sending = false
         }, 3000)
       }, 2000)
     })
@@ -140,7 +186,7 @@ class Mail {
   validate_phone(number) {
     number = number.replace(/[\s\-\(\)]/g, '') // remove spaces, dashes
     return (
-      number.match(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/) !=
+      number.match(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/) !=
       null
     )
   }

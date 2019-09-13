@@ -101,8 +101,9 @@
 
             <?php if ($key == 2) { ?>
             <div class="call-to-action call-to-action--request-demo">
-              <span>Read more about BASIS ID GDPR solution and how to make your business compliant</span>
-              <button class="btn btn--pink scroll-to-form">Request a demo</button>
+              <span><?php echo get_field('compliance_note')['text'] ?></span>
+              <button
+                class="btn btn--pink scroll-to-form"><?php echo get_field('compliance_note')['button_text'] ?></button>
             </div>
             <?php } ?>
 

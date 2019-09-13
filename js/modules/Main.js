@@ -89,14 +89,14 @@ class Main {
       )
 
     this.modal
-      .find('.modal-download__left p')
+      .find('.modal-download__left .desc')
       .text(
         target.attr('data-modal-text')
           ? target.attr('data-modal-text')
           : target.find('p').text()
       )
 
-    this.modal.find('.btn').attr('href', target.attr('data-document'))
+    this.modal.find('.btn').attr('data-document', target.attr('data-document'))
   }
 
   scroll_to_form_onClick(e) {

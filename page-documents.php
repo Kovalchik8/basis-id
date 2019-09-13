@@ -5,82 +5,6 @@
 
   <?php the_content(); ?>
 
-  <!-- <div class="documents__list container">
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/1.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a data-toggle="modal" data-target="#downloadModal" href="#" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/2.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a href="#" data-toggle="modal" data-target="#downloadModal" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/3.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a href="#" data-toggle="modal" data-target="#downloadModal" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/1.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a href="#" data-toggle="modal" data-target="#downloadModal" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/2.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a href="#" data-toggle="modal" data-target="#downloadModal" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="thumb"
-        style="background: url('<?php echo get_theme_file_uri('/img/documents/3.jpg') ?> ') top/cover no-repeat;">
-      </div>
-      <div class="details">
-        <h2 class="headline">Key AML laws: a brief analysis</h2>
-        <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML compliance strategy
-          and starting the KYC procedure. Let your CEO, legal or risk & compliance departments consider this.</p>
-        <a href="#" data-toggle="modal" data-target="#downloadModal" class="btn btn--pink">Download</a>
-      </div>
-    </div>
-
-  </div> -->
-
   <?php get_template_part('components/component', 'form'); ?>
 
   <!-- Modal -->
@@ -94,9 +18,11 @@
         <div class="modal-body">
           <div class="modal-download__left">
             <div class="headline headline--small">POP UP Title for 2 rows maximum</div>
-            <p>A list of the critical regulations you need to be aware of in 2019 when choosing your AML.</p>
-            <input type="email" name="email" placeholder="Type your email">
-            <a href="" class="btn btn--pink" download>Download</a>
+            <p class="desc">A list of the critical regulations you need to be aware of in 2019 when choosing your AML.
+            </p>
+            <?php echo do_shortcode('[mc4wp_form id="625"]'); ?>
+            <!-- <input type="email" name="email" placeholder="Type your email"> -->
+            <!-- <a href="" class="btn btn--pink" download>Download</a> -->
           </div>
           <div class="modal-download__right">
           </div>

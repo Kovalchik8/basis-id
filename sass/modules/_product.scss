@@ -359,6 +359,11 @@
           border-radius: 5px 0 0 5px;
           flex-grow: 1;
 
+          &.error {
+            border: 1px solid #FF92AC;
+            background: #FFEDED;
+          }
+
           &::placeholder {
             font-family: $font-manrope-regular;
             font-size: 14px;
