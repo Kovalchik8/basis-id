@@ -3,9 +3,7 @@
 // include css and js files
 function basis_files () {
   wp_enqueue_style( 'basis-main-stylesheet', get_stylesheet_uri(), NULL, microtime() );
-
   wp_enqueue_script( 'basis-main-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, microtime(), true );
-  
   wp_localize_script( 'basis-main-js', 'basisData', array(
     'admin_ajax' => admin_url('admin-ajax.php'),
   ));

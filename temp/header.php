@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Basis id</title>
+  <title>BASIS ID</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,11 +16,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <!-- Slick -->
-  <?php if (is_page_template( 'page-home.php' )) { ?>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <?php } ?>
+	
+	<meta name="google-site-verification" content="XidJ5y99vEzAUtnKCGWXtV9vu6GhGfoSO7IAe8MHeXs" />
 
   <?php wp_head(); ?>
 </head>
@@ -28,7 +25,6 @@
 <?php $spy_target = (is_page('faq') ) ? '#faq-nav' : '.section-tabs__tabs' ?>
 
 <body data-spy="scroll" data-target="<?php echo $spy_target ?>" data-offset="250">
-
   <header class="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">

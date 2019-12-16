@@ -31,7 +31,7 @@ class Mail {
     var data = {
       action: 'send_simple_mail',
       subject: this.simple_subject,
-      message: email
+      email: email
     }
 
     this.is_email_sending = true

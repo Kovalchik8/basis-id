@@ -8,7 +8,7 @@
       </div>
 
       <div class="col-md-2 col-6 footer__nav">
-        <?php wp_nav_menu([
+        <?php wp_nav_menu([ 
           'theme_location'  => 'footer_company'
         ]); ?>
       </div>
@@ -30,7 +30,6 @@
           foreach ($menu_items as $item) { ?>
           <li><a href="<?php echo $item['link'] ?>"><?php echo $item['icon'] ?></a></li>
           <?php } ?>
-
         </ul>
       </div>
 
@@ -60,12 +59,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
-
-<!-- Slick -->
-<?php if (is_page_template( 'page-home.php' )) { ?>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<?php } ?>
-
 
 
 <?php wp_footer(); ?>

@@ -28,6 +28,10 @@ a {
   text-align: center;
 }
 
+.container--wide {
+  max-width: 1240px;
+}
+
 .btn {
   box-shadow: 0px 3px 10px rgba(0, 10, 255, 0.15);
   border-radius: 22.5px;
@@ -99,6 +103,18 @@ a {
   &--no-radius {
     border-radius: 0;
   }
+
+  &--gray {
+    background: #99A0B0;
+
+    &:hover {
+      background: rgba(153, 160, 176, 0.9);
+    }
+
+    &:active {
+      background: #99A0B0;
+    }
+  }
 }
 
 .margin-auto {
@@ -122,6 +138,23 @@ a {
       content: url('img/wave.svg');
       display: block;
       margin: -10px 0 -15px 0;
+    }
+  }
+
+  &--line {
+    letter-spacing: .4px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 103px;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.66) 1.27%, rgba(255, 255, 255, 0) 101.27%), #FF577F;
+      margin: 32px 0 27px 0;
+
+      @media (max-width: 992px) {
+        margin: 32px auto 27px auto;
+      }
     }
   }
 }
@@ -314,8 +347,8 @@ code.plaintext {
   }
 }
 
-.tooltip {
-  top: -80px !important;
+
+.tooltip--form {
   opacity: 1 !important;
   box-shadow: 0px 3px 10px rgba(0, 10, 255, 0.15);
   border-radius: 5px;
@@ -327,29 +360,60 @@ code.plaintext {
     line-height: 20px;
     padding: 10px;
   }
+
+  &.bs-tooltip-right {
+
+    .arrow {
+      &:before {
+        border-right-color: #FF577F;
+      }
+    }
+
+  }
+
+  &.bs-tooltip-top {
+
+    .arrow {
+      &:before {
+        border-top-color: #FF577F;
+      }
+    }
+
+  }
 }
 
-.bs-tooltip-right {
-  top: -80px !important;
+
+.tooltip--top {
+  opacity: .8;
+  top: -15px !important;
+
+  .tooltip-inner {
+    font-family: $font-manrope-thin;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    padding: 15px;
+    background: #12297F;
+    border-radius: 7px;
+    text-align: left;
+    max-width: 220px;
+  }
+
+  &.bs-tooltip-top {
+    .arrow {
+      &:before {
+        border-top-color: #12297F;
+      }
+    }
+  }
 
   .arrow {
-    &:before {
-      border-right-color: #FF577F;
-    }
+    transform: scale(3);
   }
 
 }
 
-.bs-tooltip-top {
-  top: -80px !important;
 
-  .arrow {
-    &:before {
-      border-top-color: #FF577F;
-    }
-  }
-
-}
 
 .simple-page {
   padding: 150px 0;

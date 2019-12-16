@@ -20,9 +20,8 @@
             <div class="headline headline--small">POP UP Title for 2 rows maximum</div>
             <p class="desc">A list of the critical regulations you need to be aware of in 2019 when choosing your AML.
             </p>
-            <?php echo do_shortcode('[mc4wp_form id="625"]'); ?>
-            <!-- <input type="email" name="email" placeholder="Type your email"> -->
-            <!-- <a href="" class="btn btn--pink" download>Download</a> -->
+            <input type="email" name="email" placeholder="Type your email">
+            <button type="submit" class="btn btn--pink">Download</button>
           </div>
           <div class="modal-download__right">
           </div>

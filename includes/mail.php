@@ -15,12 +15,59 @@ class Mail {
 
     add_action('wp_ajax_nopriv_send_simple_mail', array($this, 'send_simple_mail') );
     add_action('wp_ajax_send_simple_mail', array($this, 'send_simple_mail') );
+
+    add_action('wp_ajax_nopriv_add_to_list', array($this, 'add_to_list') );
+    add_action('wp_ajax_add_to_list', array($this, 'add_to_list') );
+  }
+
+  public function add_to_list() {
+    $this->add_mailchimp_subscriber($_POST["email"]);
+  }
+
+  public function add_mailchimp_subscriber($email, $name = '', $phone = '') {
+    
+     // API to mailchimp
+     $list_id = get_field('form_mailchimp', 'option');
+     $authToken = '92ff5fa98bd1293eaba4dfe5076921a5-us19';
+
+     // The data to send to the API
+     $postData = array(
+       "email_address" => $email, 
+       "status" => "subscribed", 
+       "merge_fields" => array(
+         "FNAME"=> $name,
+         "PHONE"=> $phone
+       )
+     );
+
+     // Setup cURL
+     $ch = curl_init('https://us19.api.mailchimp.com/3.0/lists/'.$list_id.'/members/');
+     curl_setopt_array($ch, array(
+       CURLOPT_POST => TRUE,
+       CURLOPT_RETURNTRANSFER => TRUE,
+       CURLOPT_HTTPHEADER => array(
+         'Authorization: apikey '.$authToken,
+         'Content-Type: application/json'
+       ),
+       CURLOPT_POSTFIELDS => json_encode($postData)
+     ));
+     
+     // Send the request
+     $response = curl_exec($ch);
   }
 
   public function send_simple_mail() {
+
     $headers  = "Content-type: text/html; charset=utf8 \r\n";
-    echo wp_mail(SEND_TO, $_POST['subject'], $_POST['message'], $headers) ? 'Success' : 'Error';
+    $email = $_POST['email'];
+    if (wp_mail(SEND_TO, $_POST['subject'], $email, $headers)) {
+      echo 'Success';
+      $this->add_mailchimp_subscriber($email);
+    } else {
+      echo 'Error';
+    }
     die();
+    
   }
 
   public function send_mail() {
@@ -32,12 +79,14 @@ class Mail {
     foreach($_POST['fields'] as $input) {
       if ($input['name'] == 'name') $name = $input['value'];
       if ($input['name'] == 'email') $email = $input['value'];
+      if ($input['name'] == 'phone') $phone = $input['value'];
       $message .= '<b>' . $input['name'] . ':</b> ' . $input['value'] . '<br><br>'; 
     }
 
     if ( wp_mail(SEND_TO, $subject, $message, $headers) ) {
       
       echo 'Success';
+      $this->add_mailchimp_subscriber($email, $name, $phone);
 
       wp_insert_post( array(
         'post_type' => 'basis_email',
@@ -85,10 +134,10 @@ class Mail {
   public function custom_columns_content( $column_name, $post_id ) {
  
     if ( 'basis_email_email' == $column_name ) {
-        echo get_post_meta( $post_id, 'basis_email_email', true );
+      echo get_post_meta( $post_id, 'basis_email_email', true );
     }
     if ( 'basis_email_date' == $column_name ) {
-        echo get_the_date('j F Y  H:i', $post_id);
+      echo get_the_date('j F Y  H:i', $post_id);
     }
 
   }

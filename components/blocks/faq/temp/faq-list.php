@@ -49,18 +49,14 @@
         <?php $object_url = get_field('faq_card-url'); 
 
         if (!empty($object_url)) { ?>
-
         <div class="note">
-          <?php echo get_field('faq_list-text') ?>
-        </div>
+          <?php echo get_field('faq_list-text') ?></div>
 
         <div class="faq__object">
           <i class="fas fa-circle-notch fa-3x rotating"></i>
-
-          <iframe allow="camera;microphone" allowusermedia type="text/html" src="<?php echo $object_url; ?>"
-            width="100%" style="max-width:100%; border:none" height="750px" style="overflow:auto;">
-          </iframe>
-
+          <object type="text/html" data="<?php echo $object_url; ?>" width="100%" style="max-width:100%" height="750px"
+            style="overflow:auto;">
+          </object>
         </div>
         <?php } ?>
 

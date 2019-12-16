@@ -38,10 +38,62 @@ class Main {
       e.preventDefault()
     })
 
-    $('[data-toggle="tooltip"]').tooltip({
+    $('form [data-toggle="tooltip"]').tooltip({
       placement: $(window).outerWidth() > 767 ? 'right' : 'top',
-      trigger: 'manual'
+      trigger: 'manual',
+      template:
+        '<div class="tooltip tooltip--form" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     })
+
+    $('.home-top [data-toggle="tooltip"]').tooltip({
+      placement: 'top',
+      trigger: 'hover',
+      template:
+        '<div class="tooltip tooltip--top" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    })
+
+    // slick slider
+    var slick_slider = $('.home-top .slider'),
+      progress_bar = $('.slider-progress .inner'),
+      timeout_next_slide
+
+    if (slick_slider.length) {
+      // on slider init
+      slick_slider.on('init', function(slick) {
+        current_slide_process(slick_slider.find('.slick-active'))
+      })
+
+      // init slider
+      slick_slider.slick({
+        dots: true,
+        arrows: false
+      })
+
+      // current slide process
+      function current_slide_process(slide) {
+        slide.find('.item__photo').addClass('sharp')
+
+        progress_bar.animate({ width: '100%' }, 2000, 'linear', () => {
+          slide.find('.item__tooltip').addClass('visible')
+          timeout_next_slide = setTimeout(() => {
+            slick_slider.slick('slickNext')
+          }, 3000)
+        })
+      }
+
+      // On before slide change
+      slick_slider.on('beforeChange', () => {
+        progress_bar.stop().css('width', '0')
+        if (timeout_next_slide) clearTimeout(timeout_next_slide)
+        $('.item__tooltip').removeClass('visible')
+        $('.item__photo').removeClass('sharp')
+      })
+
+      // On after slide change
+      slick_slider.on('afterChange', () => {
+        current_slide_process(slick_slider.find('.slick-active'))
+      })
+    }
 
     if ($(window).outerWidth() > 767 && this.tabs.length) {
       var tabs_top = this.tabs.offset().top
