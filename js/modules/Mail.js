@@ -4,8 +4,9 @@ class Mail {
     this.submit_simple_btn = $('#simple_mail')
     this.submit_simple_text = this.submit_simple_btn.text()
     this.submit_btn_text = this.submit_btn.text()
-    this.simple_subject = $('.email__content h3').text()
+    this.simple_subject = ''
     this.is_email_sending = false
+    this.country = $('form .country')
     this.events()
   }
 
@@ -22,16 +23,32 @@ class Mail {
     if (this.is_email_sending) return
 
     var input = this.submit_simple_btn.closest('form').find('input[type=email]')
-    var email = input.val()
-    if (!email.length || !this.validate_email(email)) {
-      input.addClass('error')
-      return
+
+    // detect which form is submitting
+    if (input.length) {
+      var email = input.val()
+      if (!email.length || !this.validate_email(email)) {
+        input.addClass('error')
+        return
+      }
+    } else {
+      input = this.submit_simple_btn.closest('form').find('input[type=tel]')
+      var phone = input.val()
+      if (!phone.length || !this.validate_phone(phone)) {
+        input.addClass('error')
+        return
+      }
     }
+
+    this.simple_subject = email
+      ? $('.email__content h3').text()
+      : $('.sticky-form__content .text').text()
 
     var data = {
       action: 'send_simple_mail',
       subject: this.simple_subject,
-      email: email
+      email: email,
+      phone: phone
     }
 
     this.is_email_sending = true
@@ -119,6 +136,13 @@ class Mail {
       return
     }
 
+    data.fields.push({
+      name: 'country',
+      value: this.country
+        .find('.country__selected span:not(.country__placeholder)')
+        .text()
+    })
+
     // get all form data for ajax call
     for (let input of form_input) {
       data.fields.push({
@@ -152,7 +176,8 @@ class Mail {
           form.find('input:not([type=submit])').each(function(index) {
             $(this).val('')
           })
-          form.find('textarea').val('')
+          form.find('input[name=phone]').val(this.country.attr('data-code'))
+          form.find('textarea').val()
         }
         setTimeout(() => {
           this.submit_btn.text(this.submit_btn_text)
@@ -194,9 +219,7 @@ class Mail {
   // animate to form
   animate_to_form() {
     $('html, body').animate(
-      {
-        scrollTop: $('.form form').offset().top - 175
-      },
+      { scrollTop: $('.form form').offset().top - 175 },
       500
     )
   }

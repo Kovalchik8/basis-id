@@ -3,7 +3,6 @@
   padding-top: 129px;
   background: url('img/header-bg.svg') bottom/cover no-repeat;
   display: flex;
-  // padding-top: 50px;
   padding-bottom: 120px;
 
   @media (min-width: 767px) {
@@ -753,6 +752,7 @@
 
       @media (max-width: 767px) {
         width: 100%;
+        padding: 20px;
       }
     }
 
@@ -773,6 +773,118 @@
 .form {
   margin-top: 125px;
   margin-bottom: 120px;
+
+  .country,
+  .select-wrapper {
+    position: relative;
+
+    &:after {
+      content: url('img/play.svg');
+      position: absolute;
+      top: 50%;
+      right: .75rem;
+      transform: translateY(-50%) rotate(90deg);
+      width: 8px;
+    }
+  }
+
+  &-group.phone {
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+      width: 100%;
+    }
+
+    .country {
+      width: calc(50% - 10px);
+      margin-right: 10px;
+      padding-left: 20px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-right: 30px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &__selected {
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+
+        &>span {
+          white-space: nowrap;
+          width: 100%;
+        }
+      }
+
+      &__placeholder {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        color: #99A0B0;
+
+        @media (max-width: 575px) {
+          font-size: 12px;
+        }
+      }
+
+      img {
+        width: 25px;
+        margin-right: 8px;
+      }
+
+      ul {
+        position: absolute;
+        z-index: 9999;
+        width: calc(100% + 2px);
+        height: 200px;
+        overflow-y: scroll;
+        left: -1px;
+        bottom: -4px;
+        transform: translateY(100%);
+        background-color: #fff;
+        border-radius: .25rem;
+        padding: 10px 10px 10px 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .1s;
+
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::-webkit-scrollbar {
+          width: 7px;
+          background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 1px;
+          background-color: rgba(255, 87, 126, 0.8);
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: #f5f5f5;
+          border-radius: 2px;
+        }
+
+        li {
+          padding: 5px 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    input {
+      width: 50%;
+      order: 1;
+    }
+  }
 
   @media (max-width: 767px) {
     margin: 70px 0 -2px 0;
@@ -795,6 +907,10 @@
 
     @media (max-width: 767px) {
       margin-top: 30px;
+    }
+
+    select {
+      appearance: none;
     }
 
     label {

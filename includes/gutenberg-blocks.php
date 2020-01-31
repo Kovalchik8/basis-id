@@ -7,13 +7,14 @@ function register_acf_block_types() {
     'home' => array('hero', 'about', 'partners', 'help', 'explain', 'advantages', 'features', 'more', 'latest', 'hero-new', 'numbers', 'help-new', 'services', 'process', 'cards'),
     'documents' => array('hero', 'list'),
     'about' => array('hero', 'desc', 'press', 'features', 'social'),
-    'product' => array('hero', 'pills'),
+    'about-new' => array('hero', 'cards', 'quote', 'content', 'social'),
+    'product' => array('hero', 'pills', 'pills-new', 'hero-new'),
     'compliance' => array('hero', 'pills'),
     'faq' => array('list')
   );
 
-  foreach($acf_blocks as $key => $block) {
-    foreach($block as $slug) {
+  foreach($acf_blocks as $key => $block)
+    foreach($block as $slug)
       acf_register_block_type(array(
         'name'              => ''. $key . '-'. $slug .'',
         'title'             => __(''. $key . ' '. $slug .' section'),
@@ -23,8 +24,6 @@ function register_acf_block_types() {
         'icon'              => 'admin-comments',
         'keywords'          => array( ''. $slug .'', ''. $key . '' ),
       ));
-    }
-  }
 
 }
 

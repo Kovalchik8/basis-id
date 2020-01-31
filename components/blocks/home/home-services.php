@@ -26,7 +26,7 @@
         </ul>
 
         <div class="buttons">
-          <a class="btn btn--pink"
+          <a class="btn btn--pink scroll-to-form"
             href="<?php echo $block['button-one']['link'] ?>"><?php echo $block['button-one']['text'] ?></a>
           <a class="btn btn--gray"
             href="<?php echo $block['button-two']['link'] ?>"><?php echo $block['button-two']['text'] ?></a>

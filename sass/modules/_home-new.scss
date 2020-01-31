@@ -75,6 +75,12 @@
         line-height: 30px;
       }
     }
+
+    .btn {
+      @media (max-width: 992px) {
+        margin-bottom: 35px;
+      }
+    }
   }
 
   &__right {
@@ -753,5 +759,16 @@
         }
       }
     }
+  }
+}
+
+body.front-page {
+  .form {
+    margin-bottom: 85px;
+  }
+
+  .latest {
+    margin-top: 0;
+    margin-bottom: 95px;
   }
 }

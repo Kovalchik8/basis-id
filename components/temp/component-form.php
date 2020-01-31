@@ -41,7 +41,8 @@
 
         <?php } ?>
 
-        <button type="submit" class="btn btn--pink"><?php echo get_field('form_submit-text', 'option') ?></button>
+        <button onclick="__gaTracker('send', 'event', 'form', 'submit')" type="submit"
+          class="btn btn--pink"><?php echo get_field('form_submit-text', 'option') ?></button>
         <span class="note"><?php echo get_field('form_text-bottom', 'option') ?></span>
       </form>
 

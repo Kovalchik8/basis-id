@@ -55,6 +55,16 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+// Enable support for Post Thumbnails on posts and pages.
+function set_setup() {
+  add_theme_support('post-thumbnails');
+  add_image_size( 'tabor-featured-image-xsm', 120, 120, true );
+  add_image_size( 'tabor-featured-image-sml', 434, 9999, false );
+  add_image_size( 'tabor-featured-image-med', 868, 9999, false );
+  add_image_size( 'tabor-featured-image-lrg', 1736, 9999, false );
+}
+add_action('after_setup_theme', 'set_setup');
+
 require_once get_theme_file_path('/includes/gutenberg-blocks.php'); // Gutenberg custom blocks with acf
 require_once get_theme_file_path('/includes/class-wp-bootstrap-navwalker.php'); // menu
 require_once get_theme_file_path('/includes/mail.php');
