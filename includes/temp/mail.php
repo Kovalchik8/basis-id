@@ -77,10 +77,10 @@ class Mail {
     $name = $email = $message = '';
 
     foreach($_POST['fields'] as $input) {
-      if ($input['name'] == 'name') $name = $input['value'];
-      if ($input['name'] == 'email') $email = $input['value'];
-      if ($input['name'] == 'phone') $phone = $input['value'];
-      $message .= '<b>' . $input['name'] . ':</b> ' . $input['value'] . '<br><br>'; 
+      if ($input['name'] == 'name') $name = sanitize_text_field( $input['value'] );
+      if ($input['name'] == 'email') $email = sanitize_text_field( $input['value'] );
+      if ($input['name'] == 'phone') $phone = sanitize_text_field( $input['value'] );
+      $message .= '<b>' . sanitize_text_field( $input['name'] ) . ':</b> ' . sanitize_text_field( $input['value'] ) . '<br><br>'; 
     }
 
     if ( wp_mail(SEND_TO, $subject, $message, $headers) ) {
@@ -100,7 +100,7 @@ class Mail {
 
 
     } else {
-       echo 'Error'; 
+      echo 'Error'; 
     }
 
     die();
@@ -134,10 +134,10 @@ class Mail {
   public function custom_columns_content( $column_name, $post_id ) {
  
     if ( 'basis_email_email' == $column_name ) {
-        echo get_post_meta( $post_id, 'basis_email_email', true );
+      echo get_post_meta( $post_id, 'basis_email_email', true );
     }
     if ( 'basis_email_date' == $column_name ) {
-        echo get_the_date('j F Y  H:i', $post_id);
+      echo get_the_date('j F Y  H:i', $post_id);
     }
 
   }

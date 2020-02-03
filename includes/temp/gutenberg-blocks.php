@@ -7,7 +7,7 @@ function register_acf_block_types() {
     'home' => array('hero', 'about', 'partners', 'help', 'explain', 'advantages', 'features', 'more', 'latest', 'hero-new', 'numbers', 'help-new', 'services', 'process', 'cards'),
     'documents' => array('hero', 'list'),
     'about' => array('hero', 'desc', 'press', 'features', 'social'),
-    'product' => array('hero', 'pills'),
+    'product' => array('hero', 'pills', 'pills-new', 'hero-new'),
     'compliance' => array('hero', 'pills'),
     'faq' => array('list')
   );
