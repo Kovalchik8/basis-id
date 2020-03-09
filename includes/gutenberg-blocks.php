@@ -10,7 +10,9 @@ function register_acf_block_types() {
     'about-new' => array('hero', 'cards', 'quote', 'content', 'social'),
     'product' => array('hero', 'pills', 'pills-new', 'hero-new'),
     'compliance' => array('hero', 'pills'),
-    'faq' => array('list')
+    'faq' => array('list'),
+    'aml' => array('hero', 'pills', 'lists', 'clients'),
+    'aml-child' => array('hero', 'numbers', 'about', 'advantages', 'links', 'services', 'approaches')
   );
 
   foreach($acf_blocks as $key => $block)
@@ -24,7 +26,6 @@ function register_acf_block_types() {
         'icon'              => 'admin-comments',
         'keywords'          => array( ''. $slug .'', ''. $key . '' ),
       ));
-
 }
 
 if( function_exists('acf_register_block_type') ) {

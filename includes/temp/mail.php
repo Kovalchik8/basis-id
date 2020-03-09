@@ -28,7 +28,7 @@ class Mail {
     
      // API to mailchimp
      $list_id = get_field('form_mailchimp', 'option');
-     $authToken = '92ff5fa98bd1293eaba4dfe5076921a5-us19';
+     $authToken = 'api_key';
 
      // The data to send to the API
      $postData = array(
@@ -59,10 +59,14 @@ class Mail {
   public function send_simple_mail() {
 
     $headers  = "Content-type: text/html; charset=utf8 \r\n";
-    $email = $_POST['email'];
-    if (wp_mail(SEND_TO, $_POST['subject'], $email, $headers)) {
+    $email = sanitize_text_field($_POST['email']);
+    $phone = sanitize_text_field($_POST['phone']);
+    $message = $email ? $email : $phone;
+
+    if (wp_mail(SEND_TO, sanitize_text_field($_POST['subject']), $message, $headers)) {
       echo 'Success';
-      $this->add_mailchimp_subscriber($email);
+      if (!empty($email))
+        $this->add_mailchimp_subscriber($email);
     } else {
       echo 'Error';
     }
@@ -72,7 +76,7 @@ class Mail {
 
   public function send_mail() {
 
-    $subject = 'Message from basis id web site';
+    $subject = 'Message from BASIS ID web site';
     $headers  = "Content-type: text/html; charset=utf8 \r\n";
     $name = $email = $message = '';
 
@@ -107,7 +111,6 @@ class Mail {
   }
   
   public function register_email_post_type() {
-
     register_post_type( 'basis_email', array(
       'supports' => array('title'),
       'menu_icon' => 'dashicons-email-alt',
@@ -132,14 +135,11 @@ class Mail {
   }
 
   public function custom_columns_content( $column_name, $post_id ) {
- 
-    if ( 'basis_email_email' == $column_name ) {
+    if ( 'basis_email_email' == $column_name ) 
       echo get_post_meta( $post_id, 'basis_email_email', true );
-    }
-    if ( 'basis_email_date' == $column_name ) {
-      echo get_the_date('j F Y  H:i', $post_id);
-    }
 
+    if ( 'basis_email_date' == $column_name ) 
+      echo get_the_date('j F Y  H:i', $post_id);
   }
 }
 

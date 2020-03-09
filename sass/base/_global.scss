@@ -351,6 +351,12 @@ code.plaintext {
   }
 }
 
+.align-center-992 {
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
+
 .img-90proc-768 {
   img {
     width: 100%;
@@ -487,5 +493,23 @@ code.plaintext {
       padding: 40px 30px;
       margin: 0 -15px;
     }
+  }
+}
+
+.pl25-min-992 {
+  @media (min-width: 992px) {
+    padding-left: 25px;
+  }
+}
+
+.pl30-min-992 {
+  @media (min-width: 992px) {
+    padding-left: 30px;
+  }
+}
+
+.pr50-min-992 {
+  @media (min-width: 992px) {
+    padding-right: 50px;
   }
 }

@@ -82,11 +82,12 @@
         <div class="process">
           <div class="row">
 
-            <div class="process__left col-lg-6">
-              <img class="img-fluid" src="<?php echo $process['image']; ?>" alt="image">
+            <div class="process__left col-md-6 img-90proc-768">
+              <img srcset="<?php echo $process['image'] ?> 1920w, <?php echo $process['image-retina'] ?> 3840w"
+                class="img-fluid">
             </div>
 
-            <div class="process__right col-lg-6">
+            <div class="process__right col-md-6">
 
               <h3 class="headline"><?php echo $process['title']; ?></h3>
 
@@ -124,11 +125,12 @@
         <div class="container container--wide">
           <div class="row">
 
-            <div class="pill-second__left col-lg-6">
-              <img class="img-fluid" src="<?php echo $pill_second['image']; ?>" alt="image">
+            <div class="pill-second__left col-md-6 img-90proc-768">
+              <img srcset="<?php echo $pill_second['image'] ?> 1920w, <?php echo $pill_second['image-retina'] ?> 3840w"
+                class="img-fluid">
             </div>
 
-            <div class="pill-second__right col-lg-6">
+            <div class="pill-second__right col-md-6">
 
               <h3 class="headline"><?php echo $pill_second['title']; ?></h3>
 
@@ -150,7 +152,7 @@
                 <?php } ?>
               </ul>
 
-              <a class="btn"
+              <a class="btn scroll-to-form"
                 href="<?php echo $pill_second['button']['link'] ?>"><?php echo $pill_second['button']['text'] ?></a>
 
             </div>

@@ -1,3 +1,5 @@
+import LazyLoad from 'vanilla-lazyload'
+
 class Main {
   constructor() {
     this.faq_nav = $('.faq .left')
@@ -33,6 +35,10 @@ class Main {
   }
 
   window_onLoad() {
+    let lazy_load = new LazyLoad({
+      elements_selector: '.lazy'
+    })
+
     if (this.faq_object_loader.length) this.faq_object_loader.remove()
 
     this.calculate_faq_nav()

@@ -4,8 +4,8 @@ class Sticky {
     this.events()
   }
   events() {
-    if ($(window).outerWidth() > 1140)
-      $(document).ready(this.init_sticky_item.bind(this))
+    if ($(window).outerWidth() > 1200 && this.sticky_item.length)
+      $(window).on('load', this.init_sticky_item.bind(this))
   }
 
   init_sticky_item() {
@@ -14,7 +14,8 @@ class Sticky {
         right:
           $(window).width() -
           (this.sticky_item.offset().left + this.sticky_item.outerWidth()),
-        height: this.sticky_item.outerHeight()
+        height: this.sticky_item.outerHeight(),
+        width: this.sticky_item.outerWidth()
       },
       bottom_margin = $('.form').offset().top
 

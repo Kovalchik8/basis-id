@@ -21,7 +21,8 @@
             <p class="desc">A list of the critical regulations you need to be aware of in 2019 when choosing your AML.
             </p>
             <input type="email" name="email" placeholder="Type your email">
-            <button type="submit" class="btn btn--pink">Download</button>
+            <button onclick="__gaTracker('send', 'event', 'form', 'submit')" type="submit"
+              class="btn btn--pink">Download</button>
           </div>
           <div class="modal-download__right">
           </div>

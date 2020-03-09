@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Basis id</title>
+  <title>BASIS ID</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,8 +29,10 @@
 </head>
 
 <?php $spy_target = is_page('faq') ? '#faq-nav' : '.section-tabs__tabs';
-$body_class = is_front_page() ? 'front-page ' : 'not-front-page ';
-$body_class .= str_replace('.php', '', get_page_template_slug() ); ?>
+  $body_class = is_front_page() ? 'front-page ' : 'not-front-page ';
+  $body_class .= str_replace('.php', '', get_page_template_slug() ); 
+  $body_class .= ' page-' .  get_the_id();
+?>
 
 <body class="<?php echo $body_class ?>" data-spy="scroll" data-target="<?php echo $spy_target ?>" data-offset="250">
 
@@ -47,13 +49,13 @@ $body_class .= str_replace('.php', '', get_page_template_slug() ); ?>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
 
           <?php wp_nav_menu( array(
-          'theme_location'  => 'primary',
-          'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
-          'container'       => '',
-          'menu_class'      => 'navbar-nav mr-auto mt-2 mt-lg-0',
-          'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-          'walker'          => new WP_Bootstrap_Navwalker(),
-        )); ?>
+            'theme_location'  => 'primary',
+            'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+            'container'       => '',
+            'menu_class'      => 'navbar-nav mr-auto mt-2 mt-lg-0',
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'          => new WP_Bootstrap_Navwalker(),
+          )); ?>
 
           <?php if (!is_home() && get_post_type() != 'post' && !is_page_template('page-faq.php') && !is_page_template( 'page.php' ) && !is_page_template( 'page-hook.php' )) { ?>
           <button class="btn btn--white scroll-to-form navbar__to-form">Get in touch</button>

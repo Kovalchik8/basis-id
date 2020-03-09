@@ -115,6 +115,7 @@
         position: relative;
         text-align: center;
         transition: transform 0.4s;
+        transform-style: preserve-3d;
 
         @media (max-width: 1140px) {
           margin: 30px auto 0;
@@ -139,8 +140,7 @@
           content: '';
           position: absolute;
           left: 50%;
-          -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+          transform: translate3d(-50%, 0, -1px);
           border-radius: 40px;
           box-shadow: 0 10px 60px rgba(3, 0, 154, 0.05);
           background: #fff;

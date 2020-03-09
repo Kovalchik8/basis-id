@@ -55,6 +55,13 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+// ACF PRO - remove the update note
+add_filter( 'site_transient_update_plugins', function ($value) {
+  if( isset( $value->response['advanced-custom-fields-pro-master/acf.php'] ) ) {        
+     unset( $value->response['advanced-custom-fields-pro-master/acf.php'] );
+   } return $value;
+});
+
 // Enable support for Post Thumbnails on posts and pages.
 function set_setup() {
   add_theme_support('post-thumbnails');

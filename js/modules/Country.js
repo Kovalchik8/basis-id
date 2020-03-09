@@ -1345,7 +1345,7 @@ class Country {
 
   init_country_select() {
     // auto select visitor country if detected
-    if (this.visitor_country.length)
+    if (this.visitor_country && this.visitor_country.length)
       for (var i = 0; i < this.countries.length; i++) {
         if (this.countries[i].name == this.visitor_country) {
           this.country_select.find('.country__selected').html(`
@@ -1362,7 +1362,7 @@ class Country {
         ${this.countries
           .map(
             item =>
-              `<li data-code="${item.number}"><img src='${item.flag}'> <span>${item.name}</span></li>`
+              `<li data-code="${item.number}"><img class="lazy" data-src='${item.flag}'> <span>${item.name}</span></li>`
           )
           .join('')}
       `)

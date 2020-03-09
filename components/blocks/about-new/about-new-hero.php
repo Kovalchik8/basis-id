@@ -30,7 +30,8 @@
                 <label>Phone</label>
                 <input type="tel" name="phone" placeholder="Type your Phone" required>
               </div>
-              <button id="simple_mail" type="submit" class="btn"><?php echo $sticky['btn'] ?></button>
+              <button onclick="__gaTracker('send', 'event', 'form', 'submit')" id="simple_mail" type="submit"
+                class="btn"><?php echo $sticky['btn'] ?></button>
             </form>
           </div>
         </div>

@@ -28,7 +28,7 @@ class Mail {
     
      // API to mailchimp
      $list_id = get_field('form_mailchimp', 'option');
-     $authToken = 'api_key';
+     $authToken = 'a2fde093d23369ff8c960bc7ec66be96e793a3c0b07e7292cc85690947464f34-1580902825';
 
      // The data to send to the API
      $postData = array(
@@ -62,11 +62,15 @@ class Mail {
     $email = sanitize_text_field($_POST['email']);
     $phone = sanitize_text_field($_POST['phone']);
     $message = $email ? $email : $phone;
+    $subject = sanitize_text_field($_POST['subject']);
 
-    if (wp_mail(SEND_TO, sanitize_text_field($_POST['subject']), $message, $headers)) {
+    if (wp_mail(SEND_TO, $subject, $message, $headers)) {
       echo 'Success';
-      if (!empty($email))
-        $this->add_mailchimp_subscriber($email);
+
+      if (!empty($email)) $this->add_mailchimp_subscriber($email);
+
+      $this->insert_mail_post($email, '', $message, $subject);
+
     } else {
       echo 'Error';
     }
@@ -76,7 +80,7 @@ class Mail {
 
   public function send_mail() {
 
-    $subject = 'Message from basis id web site';
+    $subject = 'Message from BASIS ID web site';
     $headers  = "Content-type: text/html; charset=utf8 \r\n";
     $name = $email = $message = '';
 
@@ -91,17 +95,7 @@ class Mail {
       
       echo 'Success';
       $this->add_mailchimp_subscriber($email, $name, $phone);
-
-      wp_insert_post( array(
-        'post_type' => 'basis_email',
-        'post_status' => 'private',
-        'post_title' => $name,
-        'meta_input' => array(
-          'basis_email_email' => $email,
-          'basis_email_message' => $message
-        )
-      ));
-
+      $this->insert_mail_post($email, $name, $message);
 
     } else {
       echo 'Error'; 
@@ -109,12 +103,29 @@ class Mail {
 
     die();
   }
+
+  public function insert_mail_post($email, $name, $message, $subject = 'Request from basisid.com') {
+    wp_insert_post( array(
+      'post_type' => 'basis_email',
+      'post_status' => 'private',
+      'post_title' => $name ? $name : $subject,
+      'meta_input' => array(
+        'basis_email_email' => $email,
+        'basis_email_message' => $message ? $message : $email
+      )
+    ));
+  }
   
   public function register_email_post_type() {
     register_post_type( 'basis_email', array(
       'supports' => array('title'),
       'menu_icon' => 'dashicons-email-alt',
-      'public' => true,
+      'public' => false,
+      'show_ui' => true,
+      'exclude_from_search' => true,
+      'show_in_nav_menus' => false,
+      'has_archive' => false,  
+      'rewrite' => false,
       'labels' => array(
         'name' => 'Email',
         'add_new_item' => 'Add new',

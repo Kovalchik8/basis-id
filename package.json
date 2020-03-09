@@ -19,6 +19,7 @@
     "webpack-cli": "^2.0.13"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "vanilla-lazyload": "^12.5.0"
   }
 }
