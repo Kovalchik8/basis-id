@@ -30,7 +30,7 @@
 
 <?php $spy_target = is_page('faq') ? '#faq-nav' : '.section-tabs__tabs';
   $body_class = is_front_page() ? 'front-page ' : 'not-front-page ';
-  $body_class .= str_replace('.php', '', get_page_template_slug() ); 
+  $body_class .= str_replace(['.php', 'page-templates/'], '', get_page_template_slug() ); 
   $body_class .= ' page-' .  get_the_id();
 ?>
 

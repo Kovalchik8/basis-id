@@ -344,21 +344,6 @@
       }
     }
 
-    .page-aml-child_services {
-      .list {
-
-        &>div {
-          &:last-of-type {
-            .item {
-              img {
-                margin-top: -10px;
-              }
-            }
-          }
-        }
-      }
-    }
-
     .page-aml-child_about {
       .headline {
         &:after {
